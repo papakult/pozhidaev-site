@@ -60,7 +60,7 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.045;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -1119,6 +1119,70 @@ svg.tree { fill: var(--gold); display:block; }
 .tree-grow { width:92px; height:92px; margin:0 auto 12px; fill:var(--gold); opacity:0; clip-path: inset(0 0 100% 0); transition: clip-path 1.5s cubic-bezier(.22,.61,.36,1), opacity 1s ease; filter: drop-shadow(0 5px 14px rgba(196,154,108,0.28)); }
 .tree-grow.visible { opacity:1; clip-path: inset(0 0 0 0); }
 @media (max-width:640px){ .tree-wm-footer{ width:220px; height:220px; } .tree-wm-safety{ display:none; } .tree-grow{ width:74px; height:74px; } }
+
+/* ===== WARMTH & NATURE ===== */
+/* candle glow behind the hero arch */
+.hero-visual { position: relative; }
+.hero-visual::before {
+  content:''; position:absolute; z-index:0;
+  width:min(78vw,460px); height:min(78vw,460px);
+  top:-6%; left:50%; transform:translateX(-50%);
+  background: radial-gradient(circle, rgba(196,154,108,0.55) 0%, rgba(196,154,108,0.16) 42%, transparent 70%);
+  filter: blur(30px); pointer-events:none;
+  animation: candleFlicker 6s ease-in-out infinite;
+}
+.hero-visual > * { position:relative; z-index:1; }
+/* soft candle glow behind every section title */
+.section-title { position: relative; }
+.section-title::before {
+  content:''; position:absolute; z-index:-1;
+  width:340px; height:150px; left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  background: radial-gradient(ellipse, rgba(196,154,108,0.22) 0%, transparent 68%);
+  filter: blur(14px); pointer-events:none;
+  animation: candleFlicker 7s ease-in-out infinite;
+}
+@keyframes candleFlicker {
+  0%,100% { opacity:.85; transform:translateX(-50%) scale(1); }
+  40%     { opacity:1;   transform:translateX(-50%) scale(1.04); }
+  70%     { opacity:.78; transform:translateX(-50%) scale(0.99); }
+}
+/* section-title flicker uses centered transform */
+.section-title::before { animation-name: candleFlickerC; }
+@keyframes candleFlickerC {
+  0%,100% { opacity:.8;  transform:translate(-50%,-50%) scale(1); }
+  45%     { opacity:1;   transform:translate(-50%,-50%) scale(1.05); }
+  75%     { opacity:.72; transform:translate(-50%,-50%) scale(0.98); }
+}
+/* breathing: arch and primary CTA gently alive */
+.arch-frame { animation: breathe 7.5s ease-in-out infinite; }
+@keyframes breathe { 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.015); } }
+.btn-primary { animation: ctaGlow 4.5s ease-in-out infinite; }
+@keyframes ctaGlow {
+  0%,100% { box-shadow: 0 8px 24px rgba(92,26,27,0.22); }
+  50%     { box-shadow: 0 10px 34px rgba(196,154,108,0.42); }
+}
+/* botanical sprigs, faint natural accents */
+.sprig-accent { position:absolute; color:var(--gold); pointer-events:none; z-index:0; opacity:.16; }
+.sprig-h1 { width:120px; height:120px; top:120px; right:2%; transform:rotate(18deg); }
+.sprig-h2 { width:150px; height:150px; bottom:6%; left:1%; transform:rotate(-150deg); }
+.sprig-s1 { width:130px; height:130px; bottom:8%; right:3%; transform:rotate(160deg); opacity:.12; }
+@media (max-width:768px){ .sprig-accent{ display:none; } }
+/* warmer, candle-like living background */
+.living-bg .pocket { animation-duration: 30s; }
+.living-bg .p3 { background:#D9A066; }
+/* cursor warm trailing glow */
+@media (hover:hover) and (pointer:fine){
+  .cursor-glow {
+    position:fixed; top:0; left:0; z-index:9998; pointer-events:none;
+    width:150px; height:150px; border-radius:50%;
+    background: radial-gradient(circle, rgba(196,154,108,0.28) 0%, rgba(196,154,108,0.10) 40%, transparent 70%);
+    filter: blur(6px); opacity:0; transition: opacity .4s ease;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-visual::before, .section-title::before, .arch-frame, .btn-primary { animation: none; }
+}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://pozhidaev-sexolog.ru/">
@@ -1322,6 +1386,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 26 -64 41 -25 7 -66 24 -92 37 -52 26 -64 29 -73 14z"/>
 </g>
 </symbol></svg>
+<svg class="tree-symbol-def" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="sprig" viewBox="0 0 100 100"><path d="M50 96 C50 72 47 56 55 41 C61 29 59 18 50 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M52 64 C63 60 71 62 76 55 C67 52 58 55 52 64 Z" fill="currentColor"/><path d="M49 50 C38 48 31 50 27 43 C36 40 45 42 49 50 Z" fill="currentColor"/><path d="M54 36 C65 33 72 35 76 28 C67 26 59 28 54 36 Z" fill="currentColor"/><path d="M50 24 C41 22 35 23 31 17 C39 15 46 17 50 24 Z" fill="currentColor"/><path d="M53 14 C61 12 66 13 70 8 C63 6 57 8 53 14 Z" fill="currentColor"/></symbol></svg>
 
 
 <!-- GEO BAR -->
@@ -1392,7 +1457,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
           </div>
         </div>
       </div>
-      <div class="hero-visual">
+      <svg class="sprig-accent sprig-h1" aria-hidden="true"><use href="#sprig"/></svg><svg class="sprig-accent sprig-h2" aria-hidden="true"><use href="#sprig"/></svg><div class="hero-visual">
         <div class="arch-frame" onclick="openVideoModal()">
           <video class="arch-video" src="hero-arch.mp4" autoplay muted loop playsinline preload="metadata"></video>
         </div>
@@ -1725,7 +1790,8 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section class="section" id="about" style="position:relative">
+  <svg class="sprig-accent sprig-s1" aria-hidden="true"><use href="#sprig"/></svg>
   <div class="container">
     <svg class="tree tree-grow reveal" aria-hidden="true"><use href="#tree"/></svg>
     <h2 class="section-title reveal">Наша студия</h2>
@@ -2359,14 +2425,16 @@ counterEls.forEach(el => counterObserver.observe(el));
   document.body.classList.add('custom-cursor');
   const dot = document.createElement('div'); dot.className = 'cursor-dot';
   const ring = document.createElement('div'); ring.className = 'cursor-ring';
-  document.body.append(dot, ring);
+  const glow = document.createElement('div'); glow.className = 'cursor-glow';
+  document.body.append(glow, dot, ring);
+  let gx = window.innerWidth/2, gy = window.innerHeight/2;
 
   let mx = window.innerWidth / 2, my = window.innerHeight / 2;
   let rx = mx, ry = my, magnet = null;
 
   window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  window.addEventListener('mouseout', e => { if (!e.relatedTarget) { dot.style.opacity = '0'; ring.style.opacity = '0'; } });
-  window.addEventListener('mouseover', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+  window.addEventListener('mouseout', e => { if (!e.relatedTarget) { dot.style.opacity = '0'; ring.style.opacity = '0'; glow.style.opacity = '0'; } });
+  window.addEventListener('mouseover', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; glow.style.opacity = '1'; });
 
   const magnets = document.querySelectorAll('.svc-btn-fill, .svc-btn-outline, .btn-primary, .btn-outline, .nav-card, .safety-point, .quiz-submit, .quiz-option, .tab-btn, .play-btn');
   magnets.forEach(el => {
@@ -2384,6 +2452,9 @@ counterEls.forEach(el => counterObserver.observe(el));
     }
     rx += (tx - rx) * 0.18;
     ry += (ty - ry) * 0.18;
+    gx += (mx - gx) * 0.08;
+    gy += (my - gy) * 0.08;
+    glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
     dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
     ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
     requestAnimationFrame(loop);
