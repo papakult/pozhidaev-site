@@ -1106,7 +1106,7 @@ body.safe-mode .sensitive:hover { filter: blur(0); }
 .tree-symbol-def { position:absolute; width:0; height:0; overflow:hidden; }
 svg.tree { fill: var(--gold); display:block; }
 .logo .logo-icon { transition: filter .4s ease, transform .4s ease; }
-.logo:hover .logo-icon { filter: drop-shadow(0 0 9px rgba(196,154,108,0.9)); transform: scale(1.06) rotate(-2deg); }
+.logo:hover .logo-icon { filter: drop-shadow(0 0 14px rgba(196,154,108,1)) drop-shadow(0 0 5px rgba(196,154,108,0.85)); transform: scale(1.09) rotate(-3deg); }
 .section-divider { width:auto; height:auto; background:none; display:flex; align-items:center; justify-content:center; gap:14px; margin:0 auto 48px; }
 .section-divider .sd-line { width:46px; height:2px; background:linear-gradient(90deg, transparent, var(--gold)); border-radius:2px; }
 .section-divider .sd-line.r { background:linear-gradient(90deg, var(--gold), transparent); }
@@ -1114,8 +1114,8 @@ svg.tree { fill: var(--gold); display:block; }
 .footer { overflow:hidden; }
 .safety { overflow:hidden; }
 .tree-watermark { position:absolute; pointer-events:none; z-index:0; opacity:.05; fill:var(--gold); }
-.tree-wm-footer { width:300px; height:300px; right:16px; bottom:-30px; opacity:.09; }
-.tree-wm-safety { width:280px; height:280px; left:-24px; top:60px; opacity:.045; }
+.tree-wm-footer { width:340px; height:340px; right:8px; bottom:-40px; opacity:.20; }
+.tree-wm-safety { width:320px; height:320px; left:-30px; top:40px; opacity:.11; }
 .tree-grow { width:92px; height:92px; margin:0 auto 12px; fill:var(--gold); opacity:0; clip-path: inset(0 0 100% 0); transition: clip-path 1.5s cubic-bezier(.22,.61,.36,1), opacity 1s ease; filter: drop-shadow(0 5px 14px rgba(196,154,108,0.28)); }
 .tree-grow.visible { opacity:1; clip-path: inset(0 0 0 0); }
 @media (max-width:640px){ .tree-wm-footer{ width:220px; height:220px; } .tree-wm-safety{ display:none; } .tree-grow{ width:74px; height:74px; } }
@@ -2316,14 +2316,16 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// ===== TREE GROW ON SCROLL =====
-const growTrees = document.querySelectorAll('.tree-grow');
-const growObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); growObserver.unobserve(entry.target); }
+// ===== TREE GROW ON SCROLL (robust scroll-based) =====
+function checkGrowTrees(){
+  document.querySelectorAll('.tree-grow:not(.visible)').forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.85 && r.bottom > 0) el.classList.add('visible');
   });
-}, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
-growTrees.forEach(el => growObserver.observe(el));
+}
+window.addEventListener('scroll', checkGrowTrees, { passive: true });
+window.addEventListener('resize', checkGrowTrees);
+checkGrowTrees();
 
 // ===== COUNTER ANIMATION (Фишка 9) =====
 const counterEls = document.querySelectorAll('.counter-num');
