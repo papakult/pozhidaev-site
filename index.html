@@ -337,7 +337,9 @@ body::after {
 /* Арочный видео-плеер (Фишка 1) */
 .hero-visual {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
   position: relative;
 }
 .arch-frame {
@@ -367,16 +369,15 @@ body::after {
 .arch-overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px; background: linear-gradient(180deg, rgba(46,26,26,0) 58%, rgba(46,26,26,0.42) 100%); transition: opacity 0.3s; }
 .play-btn {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 18px 9px 11px;
+  padding: 10px 20px 10px 12px;
   border-radius: 999px;
-  background: rgba(26,16,16,0.5);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  background: var(--bordo);
   color: var(--cream);
   font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 500;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+  box-shadow: 0 6px 20px rgba(92,26,27,0.22);
   transition: transform 0.3s, background 0.3s;
 }
-.play-btn:hover { transform: scale(1.05); background: rgba(26,16,16,0.68); }
+.play-btn:hover { transform: scale(1.04); background: var(--bordo-light, #7A2E2F); }
 .play-btn .play-ico { width: 30px; height: 30px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; animation: pulse-play 2.5s infinite; }
 .play-btn svg { width: 13px; height: 13px; fill: var(--white); margin-left: 2px; }
 
@@ -1183,13 +1184,11 @@ body.safe-mode .sensitive:hover { filter: blur(0); }
       <div class="hero-visual">
         <div class="arch-frame" onclick="openVideoModal()">
           <video class="arch-video" src="hero-arch.mp4" autoplay muted loop playsinline preload="metadata"></video>
-          <div class="arch-overlay">
-            <button class="play-btn" title="Смотреть со звуком" aria-label="Смотреть видео со звуком">
-              <span class="play-ico"><svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg></span>
-              Смотреть со звуком
-            </button>
-          </div>
         </div>
+        <button class="play-btn" onclick="openVideoModal()" title="Смотреть со звуком" aria-label="Смотреть видео со звуком">
+          <span class="play-ico"><svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg></span>
+          Смотреть со звуком
+        </button>
       </div>
     </div>
   </div>
