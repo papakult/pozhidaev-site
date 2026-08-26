@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /privacy.html
 
-Sitemap: https://pozhidaev.ru/sitemap.xml
+Sitemap: https://pozhidaev-sexolog.ru/sitemap.xml
