@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игорь Пожидаев, психолог-сексолог | Телесно-ориентированная терапия</title>
+<meta name="description" content="Услуги дипломированного психолога-сексолога Игоря Пожидаева. Индивидуальные и парные консультации, телесно-ориентированные практики и обучение в Сочи, Санкт-Петербурге, Краснодаре и Новосибирске. Бережно, анонимно, без осуждения.">
+<meta name="keywords" content="психолог сексолог сочи, семейный психолог спб, телесно ориентированная терапия краснодар, консультация сексолога новосибирск, студия сексологии игоря пожидаева, парная консультация">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Игорь Пожидаев">
+<!-- Open Graph (Telegram, WhatsApp, VK) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Студия сексологии Игоря Пожидаева">
+<meta property="og:title" content="Студия сексологии Игоря Пожидаева | pozhidaev.ru">
+<meta property="og:description" content="Бережные консультации психолога-сексолога и телесно-ориентированные практики. Верните контакт с телом и гармонию в отношения.">
+<meta property="og:image" content="https://pozhidaev.ru/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://pozhidaev.ru">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #FDF8F0;
+  color: #3D2B2B;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.2; color: #2E1A1A; }
+
+/* ===== COLORS ===== */
+:root {
+  --cream: #FDF8F0;
+  --cream-dark: #F3EBE0;
+  --bordo: #5C1A1B;
+  --bordo-light: #7A2E2F;
+  --gold: #C49A6C;
+  --gold-light: #D4B48A;
+  --text: #3D2B2B;
+  --text-light: #7A6565;
+  --text-muted: #A89494;
+  --white: #FFFCF7;
+  --shadow: rgba(92,26,27,0.08);
+}
+
+/* ===== GRAIN OVERLAY (Фишка 5) ===== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== LIVING BACKGROUND (Световые карманы) ===== */
+.living-bg { position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+.living-bg .pocket {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  will-change: transform;
+}
+.living-bg .p1 { width: 46vw; height: 46vw; max-width: 620px; max-height: 620px; background: #C49A6C; top: -12%; left: -8%; animation: drift1 24s ease-in-out infinite; }
+.living-bg .p2 { width: 42vw; height: 42vw; max-width: 560px; max-height: 560px; background: #5C1A1B; bottom: -14%; right: -6%; animation: drift2 28s ease-in-out infinite; }
+.living-bg .p3 { width: 36vw; height: 36vw; max-width: 480px; max-height: 480px; background: #D4B48A; top: 28%; left: 42%; animation: drift3 32s ease-in-out infinite; }
+@keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(6%,8%) scale(1.15); } }
+@keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-7%,-5%) scale(1.2); } }
+@keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-5%,6%) scale(0.9); } }
+/* контент секций поверх фона */
+.hero, .safety, .footer { position: relative; }
+.hero > .container, .safety > .container, .footer > .container { position: relative; z-index: 1; }
+/* мягче и легче на мобильных, уважаем reduce-motion */
+@media (max-width: 768px) {
+  .living-bg .pocket { filter: blur(60px); opacity: 0.3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .living-bg .pocket { animation: none; }
+}
+
+/* ===== CUSTOM CURSOR (только desktop с точным указателем) ===== */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor, body.custom-cursor a, body.custom-cursor button { cursor: none; }
+  .cursor-dot, .cursor-ring {
+    position: fixed; top: 0; left: 0;
+    z-index: 10000;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: normal;
+  }
+  .cursor-dot { width: 8px; height: 8px; background: #C49A6C; }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid rgba(92,26,27,0.4);
+    background: rgba(92,26,27,0.04);
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  }
+  .cursor-ring.grow {
+    width: 66px; height: 66px;
+    background: rgba(92,26,27,0.12);
+    border-color: rgba(92,26,27,0.5);
+  }
+}
+
+/* ===== CONTAINER ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== SAFE MODE BUTTON (Фишка 6) ===== */
+.safe-mode-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 100px;
+  background: var(--bordo);
+  color: var(--cream);
+  box-shadow: 0 4px 20px rgba(92,26,27,0.3);
+  transition: transform 0.3s, background 0.3s;
+  font-size: 13px;
+  font-weight: 500;
+}
+.safe-mode-btn:hover { transform: translateY(-2px); }
+.safe-mode-btn.active { background: var(--gold); color: #2E1A1A; }
+.safe-mode-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+.safe-mode-btn .sm-label-on { display: none; }
+.safe-mode-btn.active .sm-label-off { display: none; }
+.safe-mode-btn.active .sm-label-on { display: inline; }
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253,248,240,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(92,26,27,0.06);
+  transition: box-shadow 0.3s;
+}
+.header.scrolled { box-shadow: 0 2px 20px var(--shadow); }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+  width: 44px; height: 44px;
+  flex-shrink: 0;
+}
+.logo-text h3 { font-size: 16px; font-weight: 600; letter-spacing: 0.02em; }
+.logo-text span { font-size: 12px; color: var(--text-light); letter-spacing: 0.04em; }
+
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: color 0.3s;
+  letter-spacing: 0.02em;
+}
+.nav a:hover { color: var(--bordo); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 28px;
+  background: var(--bordo);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover { background: var(--bordo-light); transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 28px;
+  border: 1.5px solid var(--bordo);
+  color: var(--bordo);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: all 0.3s;
+  letter-spacing: 0.02em;
+}
+.btn-outline:hover { background: var(--bordo); color: var(--cream); }
+
+.header .btn-primary { min-height: 0; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  padding: 4px 0;
+}
+.burger span {
+  display: block;
+  height: 2px;
+  background: var(--bordo);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--cream);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav a { font-size: 24px; font-family: 'Cormorant Garamond', serif; color: var(--bordo); }
+.mobile-nav .close-nav {
+  position: absolute; top: 24px; right: 24px;
+  font-size: 32px; color: var(--bordo);
+}
+
+/* ===== GEO CHIPS ===== */
+.geo-bar {
+  background: var(--cream-dark);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(92,26,27,0.04);
+}
+.geo-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.geo-chips span { margin-right: 4px; }
+.geo-chip {
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--text-light);
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+.geo-chip:hover { color: var(--bordo); }
+.geo-chip.active {
+  background: var(--bordo);
+  color: var(--cream);
+  border-color: var(--bordo);
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 80px 0 60px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-content { max-width: 540px; }
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  margin-bottom: 24px;
+  color: #2E1A1A;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--bordo);
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-light);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px var(--shadow);
+}
+.hero-badge-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+.hero-badge span { font-size: 13px; font-weight: 500; }
+.hero-badge strong { font-size: 14px; color: var(--bordo); }
+
+/* Арочный видео-плеер (Фишка 1) */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.arch-frame {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3/4;
+  border-radius: 999px 999px 24px 24px;
+  overflow: hidden;
+  background: var(--cream-dark);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(92,26,27,0.1);
+  cursor: pointer;
+}
+.arch-frame-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 14px;
+  background: linear-gradient(180deg, var(--cream-dark) 0%, #EDE4D8 100%);
+}
+.arch-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.arch-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(46,26,26,0.18); transition: background 0.3s; }
+.arch-frame:hover .arch-overlay { background: rgba(46,26,26,0.28); }
+.play-btn {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(196,154,108,0.4);
+  animation: pulse-play 2.5s infinite;
+  transition: transform 0.3s;
+}
+.play-btn:hover { transform: scale(1.1); }
+.play-btn svg { width: 24px; height: 24px; fill: var(--white); margin-left: 3px; }
+
+@keyframes pulse-play {
+  0%, 100% { box-shadow: 0 4px 20px rgba(196,154,108,0.4); }
+  50% { box-shadow: 0 4px 40px rgba(196,154,108,0.6); }
+}
+
+/* ===== SECTION UTILS ===== */
+.section { padding: 80px 0; }
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.section-sub {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 48px;
+  border-radius: 2px;
+}
+
+/* ===== VALUES ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.value-card {
+  background: var(--cream-dark);
+  padding: 36px 28px;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow);
+}
+.value-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.value-card:nth-child(1) .value-dot { background: var(--gold-light); }
+.value-card:nth-child(2) .value-dot { background: var(--bordo); opacity: 0.6; }
+.value-card:nth-child(3) .value-dot { background: var(--bordo); }
+.value-card h4 { font-size: 20px; margin-bottom: 12px; }
+.value-card p { font-size: 15px; color: var(--text-light); line-height: 1.6; }
+
+/* ===== NAVIGATOR (Фишка 4) ===== */
+.navigator { padding: 40px 0; }
+.nav-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.nav-card {
+  padding: 32px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(92,26,27,0.1);
+  background: var(--white);
+  text-align: center;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.nav-card:hover {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--white) 0%, rgba(196,154,108,0.08) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+.nav-card-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+.nav-card h4 { font-size: 19px; margin-bottom: 8px; }
+.nav-card p { font-size: 14px; color: var(--text-light); }
+
+/* ===== SERVICES TABS (Фишка 2) ===== */
+.tabs-wrap { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
+.tab-btn {
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  border: 1.5px solid rgba(92,26,27,0.12);
+  transition: all 0.3s;
+}
+.tab-btn:hover { border-color: var(--bordo); color: var(--bordo); }
+.tab-btn.active { background: var(--bordo); color: var(--cream); border-color: var(--bordo); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeInUp 0.4s ease; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid rgba(92,26,27,0.06);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+.service-tags-row { display: flex; gap: 8px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+.service-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tag-consultation { background: rgba(92,26,27,0.08); color: var(--bordo); }
+.tag-practice { background: rgba(196,154,108,0.15); color: #8B6B42; }
+.tag-education { background: rgba(92,26,27,0.06); color: var(--bordo-light); }
+.tag-forever { background: rgba(196,154,108,0.2); color: #8B6B42; }
+
+.service-card h4 { font-size: 19px; margin-bottom: 10px; }
+.service-card .service-desc { font-size: 14px; color: var(--text-light); margin-bottom: 20px; line-height: 1.6; }
+.service-card h4.sensitive, .service-card .service-desc.sensitive { transition: filter 0.3s; }
+
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid rgba(92,26,27,0.06);
+  margin-top: auto;
+}
+.service-price { font-size: 20px; font-weight: 600; color: var(--bordo); font-family: 'Cormorant Garamond', serif; }
+.service-time { font-size: 13px; color: var(--text-muted); }
+.service-buttons { display: flex; gap: 10px; }
+.svc-btn-outline {
+  flex: 1;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1.5px solid rgba(92,26,27,0.2);
+  color: var(--bordo);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+.svc-btn-outline:hover { border-color: var(--bordo); background: rgba(92,26,27,0.04); }
+.svc-btn-fill {
+  flex: 1;
+  min-height: 44px;
+  padding: 10px 16px;
+  background: var(--bordo);
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+.svc-btn-fill:hover { background: var(--bordo-light); }
+.service-master { font-size: 12.5px; color: #8B6B42; font-weight: 500; margin: -6px 0 14px; }
+.price-book { cursor: pointer; }
+.price-book:hover { text-decoration: underline; }
+
+/* ===== CONTACT TILES (Telegram / WhatsApp) ===== */
+.contact-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 560px; margin: 0 auto; }
+.contact-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 30px 22px; border-radius: 20px; font-size: 16px; font-weight: 600; text-align: center; min-height: 140px; color: #fff; transition: transform 0.3s, box-shadow 0.3s; }
+.contact-tile svg { width: 34px; height: 34px; }
+.contact-tile small { font-weight: 400; font-size: 12.5px; opacity: 0.9; }
+.tile-tg { background: #229ED9; }
+.tile-wa { background: #25D366; }
+.contact-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.16); }
+.contact-hint { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 22px; }
+@media (max-width: 560px) { .contact-tiles { grid-template-columns: 1fr; } }
+
+/* ===== FLOATING TELEGRAM ===== */
+.float-tg { position: fixed; bottom: 24px; left: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(34,158,217,0.45); transition: transform 0.3s; animation: floatpulse 2.6s infinite; }
+.float-tg:hover { transform: scale(1.08); }
+.float-tg svg { width: 28px; height: 28px; }
+@keyframes floatpulse { 0%,100% { box-shadow: 0 6px 24px rgba(34,158,217,0.45); } 50% { box-shadow: 0 6px 34px rgba(34,158,217,0.7); } }
+
+/* Safe mode blur */
+body.safe-mode .sensitive { filter: blur(5px); }
+body.safe-mode .sensitive:hover { filter: blur(0); }
+
+/* ===== SERVICE POPUP (Фишка 3) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(46,26,26,0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-box {
+  background: var(--cream);
+  border-radius: 24px;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s;
+  box-shadow: 0 30px 80px rgba(46,26,26,0.3);
+}
+.modal-overlay.open .modal-box { transform: translateY(0); }
+.modal-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(92,26,27,0.06);
+  color: var(--bordo);
+  font-size: 22px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s;
+}
+.modal-close:hover { background: rgba(92,26,27,0.14); }
+.modal-box h3 { font-size: 26px; margin-bottom: 8px; padding-right: 40px; }
+.modal-meta { font-size: 14px; color: var(--gold); font-weight: 600; margin-bottom: 20px; }
+.modal-box .modal-intro { font-size: 15px; color: var(--text-light); line-height: 1.75; margin-bottom: 24px; }
+.modal-steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; text-align: left; }
+.modal-step { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+.modal-step-num {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--bordo);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.modal-step-body h5 { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--bordo); margin-bottom: 3px; }
+.modal-step-body p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin: 0; }
+.modal-box .btn-primary { width: 100%; }
+.modal-box.scroll-body { max-height: 88vh; overflow-y: auto; }
+
+/* ===== VIDEO MODAL (Фишка 1) ===== */
+.video-modal .modal-box {
+  max-width: 700px;
+  padding: 0;
+  overflow: hidden;
+  background: #1A1010;
+}
+.video-modal .modal-close {
+  background: rgba(253,248,240,0.15);
+  color: var(--cream);
+  z-index: 3;
+}
+.video-modal .modal-close:hover { background: rgba(253,248,240,0.3); }
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #1A1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(253,248,240,0.5);
+  font-size: 14px;
+  text-align: center;
+  padding: 24px;
+}
+
+/* ===== STEPS ===== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.step-card {
+  background: var(--cream-dark);
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+}
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: rgba(92,26,27,0.12);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.step-card h4 { font-size: 18px; margin-bottom: 10px; }
+.step-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+/* ===== SAFETY MAP ===== */
+.safety { background: var(--cream-dark); }
+.safety-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.safety-visual {
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E8DDD0, #D8CCBC);
+  aspect-ratio: 4/5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.safety-visual img { width: 100%; height: 100%; object-fit: cover; }
+.studio-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.studio-gallery img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 16px; box-shadow: 0 6px 24px var(--shadow); }
+@media (max-width: 768px) { .studio-gallery { grid-template-columns: 1fr 1fr; } }
+.safety-points { display: flex; flex-direction: column; gap: 20px; }
+.safety-point {
+  padding: 24px;
+  background: var(--white);
+  border-radius: 16px;
+  border-left: 3px solid var(--gold);
+  transition: transform 0.3s;
+}
+.safety-point:hover { transform: translateX(4px); }
+.safety-point h4 { font-size: 16px; margin-bottom: 8px; color: var(--bordo); }
+.safety-point p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+.safety-point-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+  margin-right: 8px;
+  animation: pulse-dot 2s infinite;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.about-person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo {
+  width: 180px;
+  height: 220px;
+  border-radius: 20px;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.about-text h3 { font-size: 26px; margin-bottom: 12px; }
+.about-text p { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
+
+.counters {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+}
+.counter { text-align: left; }
+.counter-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--bordo);
+  line-height: 1;
+}
+.counter-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* ===== QUIZ (Фишка 7) ===== */
+.quiz-section { background: var(--bordo); color: var(--cream); border-radius: 32px; padding: 60px; margin: 0 24px; }
+.quiz-section h2 { color: var(--cream); text-align: center; margin-bottom: 8px; }
+.quiz-sub { text-align: center; color: rgba(253,248,240,0.7); font-size: 16px; margin-bottom: 40px; }
+
+.quiz-progress-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.quiz-progress {
+  flex: 1;
+  height: 4px;
+  background: rgba(253,248,240,0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.quiz-progress-bar {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+.quiz-progress-leaf { font-size: 18px; }
+.quiz-counter { font-size: 13px; color: rgba(253,248,240,0.6); white-space: nowrap; }
+
+.quiz-step { display: none; }
+.quiz-step.active { display: block; animation: fadeInUp 0.4s ease; }
+.quiz-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.quiz-options { display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
+.quiz-option {
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(253,248,240,0.2);
+  color: var(--cream);
+  font-size: 15px;
+  text-align: left;
+  transition: all 0.3s;
+  line-height: 1.5;
+}
+.quiz-option:hover {
+  border-color: var(--gold);
+  background: rgba(196,154,108,0.12);
+}
+
+.quiz-result {
+  display: none;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.quiz-result.active { display: block; animation: fadeInUp 0.4s ease; }
+.quiz-result h3 {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.quiz-result p {
+  color: rgba(253,248,240,0.8);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.quiz-result .quiz-bonus {
+  font-size: 14px;
+  color: rgba(253,248,240,0.6);
+  margin-bottom: 28px;
+}
+.quiz-input-wrap {
+  display: flex;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.quiz-input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(253,248,240,0.2);
+  background: rgba(253,248,240,0.06);
+  color: var(--cream);
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+  outline: none;
+}
+.quiz-input::placeholder { color: rgba(253,248,240,0.4); }
+.quiz-input:focus { border-color: var(--gold); }
+.quiz-submit {
+  padding: 14px 28px;
+  min-height: 48px;
+  background: var(--gold);
+  color: #2E1A1A;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 100px;
+  transition: background 0.3s;
+}
+.quiz-submit:hover { background: var(--gold-light); }
+.quiz-restart {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(253,248,240,0.5);
+  text-decoration: underline;
+}
+
+/* ===== REVIEWS (Фишка 8) ===== */
+.reviews-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.review-toggle-btn {
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1.5px solid rgba(92,26,27,0.12);
+  color: var(--text-light);
+  transition: all 0.3s;
+}
+.review-toggle-btn.active { background: var(--bordo); color: var(--cream); border-color: var(--bordo); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(92,26,27,0.06);
+  border-radius: 20px;
+  padding: 28px;
+  transition: opacity 0.3s;
+}
+.review-card.hidden { display: none; }
+.review-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-text {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.review-author { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+.review-date { color: var(--text-muted); opacity: 0.8; }
+.reviews-more { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 32px; border-radius: 100px; border: 1.5px solid var(--bordo); color: var(--bordo); font-size: 14px; font-weight: 500; transition: all 0.3s; }
+.reviews-more:hover { background: var(--bordo); color: var(--cream); }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid rgba(92,26,27,0.08);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 24px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+.faq-question:hover { color: var(--bordo); }
+.faq-icon {
+  width: 24px; height: 24px;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.faq-answer p {
+  padding-bottom: 24px;
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== GEO SECTION ===== */
+.geo-section { text-align: center; }
+.geo-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.geo-btn {
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  border: 1.5px solid rgba(92,26,27,0.12);
+  color: var(--text-light);
+  transition: all 0.3s;
+}
+.geo-btn.active { background: var(--bordo); color: var(--cream); border-color: var(--bordo); }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: var(--cream-dark);
+  border-radius: 32px;
+  padding: 60px 40px;
+  text-align: center;
+  margin: 0 24px;
+}
+.final-cta h2 { margin-bottom: 16px; }
+.final-cta p { color: var(--text-light); font-size: 16px; max-width: 500px; margin: 0 auto 32px; line-height: 1.7; }
+
+/* ===== SMART FORM (Фишка 10) ===== */
+.smart-form { max-width: 500px; margin: 0 auto; text-align: left; }
+.form-label { font-size: 14px; font-weight: 500; margin-bottom: 10px; display: block; color: var(--text); }
+.form-tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.form-tag {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(92,26,27,0.12);
+  font-size: 14px;
+  color: var(--text-light);
+  transition: all 0.3s;
+}
+.form-tag.selected { background: var(--bordo); color: var(--cream); border-color: var(--bordo); }
+.form-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(92,26,27,0.12);
+  background: var(--white);
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  outline: none;
+  margin-bottom: 16px;
+  transition: border-color 0.3s;
+}
+.form-input:focus { border-color: var(--bordo); }
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid rgba(92,26,27,0.06);
+  margin-top: 80px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-brand { font-size: 14px; color: var(--text-muted); }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 14px;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--bordo); }
+.footer-geo { font-size: 13px; color: var(--text-muted); }
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { order: -1; }
+  .arch-frame { max-width: 300px; }
+  .hero-content { max-width: 100%; text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-person { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .counters { justify-content: center; }
+  .safety-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .burger { display: flex; }
+  .mobile-nav { display: flex; }
+  .values-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .nav-cards { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .quiz-section { padding: 40px 24px; margin: 0 16px; border-radius: 24px; }
+  .final-cta { padding: 40px 24px; margin: 0 16px; }
+  .quiz-input-wrap { flex-direction: column; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .hero { padding: 40px 0; min-height: auto; }
+  .section { padding: 60px 0; }
+  .modal-box { padding: 32px 24px; }
+}
+
+@media (max-width: 480px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-buttons .btn-primary, .hero-buttons .btn-outline { width: 100%; }
+  .geo-bar { overflow-x: auto; }
+  .geo-chips { white-space: nowrap; }
+  .reviews-toggle { flex-direction: column; align-items: center; }
+  .safe-mode-btn .sm-label-off, .safe-mode-btn.active .sm-label-on { display: none; }
+  .safe-mode-btn { padding: 0; width: 48px; justify-content: center; }
+}
+</style>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://pozhidaev.ru/">
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "LocalBusiness","name": "Студия сексологии Игоря Пожидаева","url": "https://pozhidaev.ru/","image": "https://pozhidaev.ru/og-image.jpg","description": "Психолог-сексолог Игорь Пожидаев. Индивидуальные и парные консультации, телесно-ориентированная терапия, обучение. Сочи, Санкт-Петербург, Новосибирск, Краснодар.","address": {"@type": "PostalAddress","addressLocality": "Сочи","addressCountry": "RU"},"areaServed": ["Сочи","Санкт-Петербург","Новосибирск","Краснодар"],"sameAs": ["https://t.me/PRO_cekc","https://www.instagram.com/yonisochi","https://vk.ru/yoni_sochi"],"founder": {"@type": "Person","name": "Игорь Пожидаев","jobTitle": "Психолог-сексолог"},"aggregateRating": {"@type": "AggregateRating","ratingValue": "5","reviewCount": "12"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Нужно ли раздеваться на консультации?","acceptedAnswer": {"@type": "Answer","text": "Нет. Консультация это разговор. К телесным практикам переходим отдельно, по запросу и с обсуждением."}},{"@type": "Question","name": "Можно прийти с партнёром?","acceptedAnswer": {"@type": "Answer","text": "Да, есть парные консультации и практики. Можно прийти и одному."}},{"@type": "Question","name": "Как записаться?","acceptedAnswer": {"@type": "Answer","text": "Оставляете контакты, выбираете удобный период. Игорь связывается для подтверждения. Первые 15 минут бесплатно."}},{"@type": "Question","name": "Это безопасно?","acceptedAnswer": {"@type": "Answer","text": "Абсолютно. Границы, согласие и комфорт это основа. Вы всегда можете остановить процесс."}}]}
+</script>
+</head>
+<body>
+
+<!-- GEO BAR -->
+<div class="geo-bar">
+  <div class="container">
+    <div class="geo-chips">
+      <span>География:</span>
+      <button class="geo-chip active">Сочи</button>
+      <button class="geo-chip">Санкт-Петербург</button>
+      <button class="geo-chip">Новосибирск</button>
+      <button class="geo-chip">Краснодар</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img class="logo-icon" src="logo.png" alt="Древо жизни, студия Игоря Пожидаева">
+        <div class="logo-text">
+          <h3>Игорь Пожидаев</h3>
+          <span>психолог-сексолог</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="about.html">О студии</a>
+        <a href="education.html">Обучение</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contact" class="btn-primary">Записаться</a>
+      </nav>
+      <button class="burger" onclick="toggleMobileNav()" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-nav" onclick="toggleMobileNav()" aria-label="Закрыть">&times;</button>
+  <a href="#services" onclick="toggleMobileNav()">Услуги</a>
+  <a href="about.html">О студии</a>
+  <a href="education.html">Обучение</a>
+  <a href="#reviews" onclick="toggleMobileNav()">Отзывы</a>
+  <a href="#contact" class="btn-primary" onclick="toggleMobileNav()">Записаться</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="living-bg"><div class="pocket p1"></div><div class="pocket p2"></div><div class="pocket p3"></div></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1>Близость начинается с <em>доверия к себе</em></h1>
+        <p class="hero-sub">Психолог-сексолог, практик телесной работы. Помогаю вернуть контакт с телом, разобраться в желаниях и углубить отношения с партнёром.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Записаться бесплатно</a>
+          <a href="#navigator" class="btn-outline">Узнать больше</a>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <div>
+            <span>Первая встреча</span><br>
+            <strong>Бесплатно, 15 мин</strong>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="arch-frame" onclick="openVideoModal()">
+          <video class="arch-video" src="hero-arch.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="arch-overlay">
+            <button class="play-btn" title="Смотреть со звуком" aria-label="Смотреть видео со звуком">
+              <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section">
+  <div class="container">
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-dot"></div>
+        <h4>Безопасное пространство</h4>
+        <p>Здесь можно говорить о чём угодно. Без осуждения, ярлыков и неловких пауз.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-dot"></div>
+        <h4>Тело и психика вместе</h4>
+        <p>Не разделяю поговорить и прожить. Слова работают в паре с телесным опытом.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-dot"></div>
+        <h4>Конкретный результат</h4>
+        <p>Не бесконечная терапия, а чёткая работа с запросом. От диагностики до ощутимых изменений.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAVIGATOR (Фишка 4) -->
+<section class="navigator" id="navigator">
+  <div class="container">
+    <h2 class="section-title reveal">С чем вы приходите?</h2>
+    <div class="section-divider"></div>
+    <div class="nav-cards">
+      <button class="nav-card reveal" onclick="switchTab('tab-consultations'); scrollToEl('#services')">
+        <span class="nav-card-icon">&#128172;</span>
+        <h4>Ищу гармонию в мыслях и паре</h4>
+        <p>Консультации, парная работа, разбор отношений</p>
+      </button>
+      <button class="nav-card reveal" onclick="switchTab('tab-practices'); scrollToEl('#services')">
+        <span class="nav-card-icon">&#127807;</span>
+        <h4>Хочу снять зажимы в теле</h4>
+        <p>Телесные практики, расслабление, чувствительность</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (Фишка 2, 3) -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title reveal">Чем я могу помочь</h2>
+    <p class="section-sub reveal">Консультации для понимания, практики для проживания, обучение для тех, кто хочет освоить.</p>
+
+    <div class="tabs-wrap">
+      <button class="tab-btn active" data-tab="tab-consultations" onclick="switchTab('tab-consultations')">Консультации</button>
+      <button class="tab-btn" data-tab="tab-practices" onclick="switchTab('tab-practices')">Телесные практики</button>
+      <button class="tab-btn" data-tab="tab-education" onclick="switchTab('tab-education')">Обучение</button>
+    </div>
+
+    <!-- Tab 1: Consultations -->
+    <div class="tab-content active" id="tab-consultations">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span></div>
+          <h4>Диагностическая встреча</h4>
+          <p class="service-desc">Вводное знакомство. Вы кратко рассказываете о ситуации, я слушаю и говорю, смогу ли помочь. Это ни к чему не обязывает.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на бесплатную диагностическую встречу.','igor')" title="Записаться">Бесплатно</span>
+            <span class="service-time">15 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('consultations', 0)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на бесплатную диагностическую встречу.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span></div>
+          <h4>Экспресс-консультация</h4>
+          <p class="service-desc">Короткая точечная сессия. Один конкретный вопрос, быстрая диагностика и понятный план действий.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на экспресс-консультацию.','igor')" title="Записаться">3 000 ₽</span>
+            <span class="service-time">30 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('consultations', 1)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на экспресс-консультацию.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span></div>
+          <h4>Индивидуальная сессия</h4>
+          <p class="service-desc">Глубокая работа с запросами о сексуальности, близости, страхах и блоках. Полное отсутствие табу.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на индивидуальную консультацию.','igor')" title="Записаться">5 000 ₽</span>
+            <span class="service-time">60 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('consultations', 2)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на индивидуальную консультацию.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span></div>
+          <h4>Парная работа</h4>
+          <p class="service-desc">Сессия для пар. Помогает пройти через кризис, преодолеть дистанцию и вернуть утраченную близость.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на парную консультацию.','igor')" title="Записаться">7 000 ₽</span>
+            <span class="service-time">1 ч 20 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('consultations', 3)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на парную консультацию.','igor')">Занять слот</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Practices -->
+    <div class="tab-content" id="tab-practices">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Йони-массаж</h4>
+          <p class="service-desc sensitive">Бережная телесная практика для женщин. Работа со скрытыми зажимами, возвращением чувствительности и принятием себя.</p>
+          <p class="service-master">Мастер: Игорь Пожидаев</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.','igor')" title="Записаться">15 000 ₽</span>
+            <span class="service-time">120 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 0)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Йони-массаж Присутствие</h4>
+          <p class="service-desc sensitive">Практика для женщины в присутствии её партнёра. Совместный опыт, который укрепляет доверие в паре на глубинном уровне.</p>
+          <p class="service-master">Мастер: Игорь Пожидаев</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.','igor')" title="Записаться">20 000 ₽</span>
+            <span class="service-time">2,5 ч</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 1)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Парный йони-массаж Два поля, одна цельность</h4>
+          <p class="service-desc sensitive">Тантрическая и телесная практика для пар. Синхронная работа с обоими партнёрами для снятия барьеров.</p>
+          <p class="service-master">Синхронная работа двух мастеров: Игоря и Евгении</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.','igor')" title="Записаться">23 000 ₽</span>
+            <span class="service-time">2,5 ч</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 2)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Практика Сквирт</h4>
+          <p class="service-desc sensitive">Интенсивная и сфокусированная техника. Раскрытие природного потенциала тела и расширение границ чувствительности.</p>
+          <p class="service-master">Мастер: Игорь Пожидаев</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Сквирт.','igor')" title="Записаться">6 000 ₽</span>
+            <span class="service-time">20-30 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 3)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Сквирт.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Лингам-массаж</h4>
+          <p class="service-desc sensitive">Лингам-массаж, это не секс и не стимуляция ради результата. Это бережная практика, которая снимает хроническое напряжение и возвращает мужчине связь с телом через присутствие.</p>
+          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.','evgenia')" title="Записаться">25 000 ₽</span>
+            <span class="service-time">90 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 4)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.','evgenia')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Тантрический массаж</h4>
+          <p class="service-desc sensitive">Медленная целостная практика для всего тела. Работа с дыханием и вниманием, где важен сам процесс присутствия.</p>
+          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на тантрический массаж.','evgenia')" title="Записаться">12 000 ₽</span>
+            <span class="service-time">90 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 5)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на тантрический массаж.','evgenia')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
+          <h4 class="sensitive">Эрогенный массаж</h4>
+          <p class="service-desc sensitive">Мягкая работа с чувствительностью тела и снятием блоков. Возвращает остроту ощущений и живой контакт с собой.</p>
+          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на эрогенный массаж.','evgenia')" title="Записаться">10 000 ₽</span>
+            <span class="service-time">60 мин</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('practices', 6)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на эрогенный массаж.','evgenia')">Занять слот</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Education -->
+    <div class="tab-content" id="tab-education">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
+          <h4>Обучение йони-массажу</h4>
+          <p class="service-desc">Интенсивный практический курс. Теория, анатомия и отработка техник. Два направления: для практиков и для семейных пар.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.','igor')" title="Записаться">от 40 000 ₽</span>
+            <span class="service-time">6-8 ч</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('education', 0)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
+          <h4>Курс массажа йони</h4>
+          <p class="service-desc">Полная терапевтическая программа. Мягкое погружение от базового расслабления до проработки глубоких блоков за 5 встреч.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.','igor')" title="Записаться">50 000 ₽</span>
+            <span class="service-time">5 сеансов</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('education', 1)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.','igor')">Занять слот</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section" style="background: var(--cream-dark);">
+  <div class="container">
+    <h2 class="section-title reveal">Как проходит встреча</h2>
+    <div class="section-divider"></div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <h4>Знакомство</h4>
+        <p>15 минут бесплатно. Вы рассказываете о проблеме, я слушаю.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <h4>Диагностика</h4>
+        <p>Разбираемся, что стоит за запросом на самом деле. Подбираем формат работы.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <h4>Работа</h4>
+        <p>Проходим сессии, телесные практики, вы получаете домашние наблюдения.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">04</div>
+        <h4>Результат</h4>
+        <p>Вы обретаете совершенно новый контакт с телом и ясность в отношениях.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFETY MAP -->
+<section class="section safety">
+  <div class="living-bg"><div class="pocket p1"></div><div class="pocket p2"></div><div class="pocket p3"></div></div>
+  <div class="container">
+    <h2 class="section-title reveal">Безопасность и комфорт</h2>
+    <p class="section-sub reveal">Каждая деталь студии создана для вашего спокойствия</p>
+    <div class="safety-grid">
+      <div class="safety-visual reveal">
+        <img src="studio-room.jpg" alt="Кабинет студии при свечах">
+      </div>
+      <div class="safety-points">
+        <div class="safety-point reveal">
+          <h4><span class="safety-point-dot"></span>Атмосфера</h4>
+          <p>Приглушенный теплый свет, мягкие маты и натуральные аромамасла. Вы можете сами выбрать музыкальное сопровождение или остаться в полной тишине.</p>
+        </div>
+        <div class="safety-point reveal">
+          <h4><span class="safety-point-dot"></span>Одежда и гигиена</h4>
+          <p>Мы предоставляем стерильные одноразовые халаты, тапочки и белье. До и после сеанса в вашем полном распоряжении находится чистый душ и свежие полотенца.</p>
+        </div>
+        <div class="safety-point reveal">
+          <h4><span class="safety-point-dot"></span>Стоп-слово</h4>
+          <p>Главное правило нашей студии, это абсолютный контроль в ваших руках. Если в любой момент вам станет некомфортно, вы просто говорите слово Стоп. Практика немедленно прекращается без каких-либо объяснений.</p>
+        </div>
+        <div class="safety-point reveal">
+          <h4><span class="safety-point-dot"></span>Чистота</h4>
+          <p>Профессиональная дезинфекция всех поверхностей антисептиками премиум-уровня после каждого гостя. Чистота медицинского стандарта в уютной спа-атмосфере.</p>
+        </div>
+      </div>
+    </div>
+    <div class="studio-gallery reveal">
+      <img src="studio-hall.jpg" alt="Зона отдыха и чай" loading="lazy">
+      <img src="studio-mat.jpg" alt="Комната для встреч" loading="lazy">
+      <img src="studio-bath.jpg" alt="Кабинет для практик" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title reveal">Наша студия</h2>
+    <div class="section-divider"></div>
+    <div class="about-grid">
+      <div class="about-person reveal">
+        <div class="about-photo"><img src="igor.jpg" alt="Игорь Пожидаев, психолог-сексолог"></div>
+        <div class="about-text">
+          <h3>Игорь Пожидаев</h3>
+          <p>Психолог-сексолог с пятилетним опытом. Работаю с темами близости, сексуальности, телесного доверия. Совмещаю психологическую консультацию с телесными практиками.</p>
+          <p>Живу и принимаю в Сочи. Выезжаю в Санкт-Петербург, Новосибирск, Краснодар. Обучаю технике йони-массажа практиков и пары.</p>
+          <div class="counters">
+            <div class="counter">
+              <div class="counter-num" data-target="5" data-suffix="+">5+</div>
+              <div class="counter-label">лет практики</div>
+            </div>
+            <div class="counter">
+              <div class="counter-num" data-target="500" data-suffix="+">500+</div>
+              <div class="counter-label">консультаций</div>
+            </div>
+            <div class="counter">
+              <div class="counter-num" data-target="4" data-suffix="">4</div>
+              <div class="counter-label">города</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-person reveal">
+        <div class="about-photo"><img src="evgenia.jpg" alt="Евгения Пожидаева, мастер телесных практик"></div>
+        <div class="about-text">
+          <h3>Евгения Пожидаева</h3>
+          <p>Мастер телесных практик. Специализируется на лингам-массаже для мужчин и женщин, парных телесных практиках.</p>
+          <p>Работает в паре с Игорем. Создаёт безопасное пространство, в котором ваше тело может полностью расслабиться и раскрыться.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ (Фишка 7) -->
+<section class="section" id="quiz">
+  <div class="quiz-section">
+    <h2>Не знаете, с чего начать?</h2>
+    <p class="quiz-sub">Пройдите короткий тест и получите рекомендацию, какой формат работы подойдёт вам</p>
+
+    <div class="quiz-progress-wrap">
+      <span class="quiz-progress-leaf">&#127807;</span>
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="quizProgress"></div>
+      </div>
+      <span class="quiz-counter" id="quizCounter">1 из 5</span>
+    </div>
+
+    <!-- Q1 -->
+    <div class="quiz-step active" data-step="1">
+      <div class="quiz-question">Какая главная цель вашего визита?</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="quizAnswer('psy')">Разобраться в себе, понять истинные желания и снять внутренние табу</button>
+        <button class="quiz-option" onclick="quizAnswer('body')">Расслабиться, снять физическое напряжение и вернуть чувствительность телу</button>
+        <button class="quiz-option" onclick="quizAnswer('psy')">Наладить отношения с партнером, вернуть былую страсть и близость</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="quiz-step" data-step="2">
+      <div class="quiz-question">Чувствуете ли вы, что стресс мешает радоваться жизни?</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="quizAnswer('psy')">Да, в голове постоянный поток мыслей, не могу отключить тотальный контроль</button>
+        <button class="quiz-option" onclick="quizAnswer('body')">Да, тело как каменное, чувствую сильные зажимы в шее, плечах или тазу</button>
+        <button class="quiz-option" onclick="quizAnswer('psy')">Скорее чувствую глубокое эмоциональное выгорание и апатию</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="quiz-step" data-step="3">
+      <div class="quiz-question">Был ли у вас опыт телесных практик?</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="quizAnswer('body')">Нет, это для меня совершенно новый и довольно волнительный шаг</button>
+        <button class="quiz-option" onclick="quizAnswer('body')">Да, пробовал(а), хочу углубить этот опыт в безопасном и чистом пространстве</button>
+        <button class="quiz-option" onclick="quizAnswer('psy')">Предпочитаю классический формат работы, общение и консультации</button>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="quiz-step" data-step="4">
+      <div class="quiz-question">Как бы вы хотели провести первую сессию?</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="quizAnswer('psy')">В формате доверительной беседы, без какого-либо телесного контакта</button>
+        <button class="quiz-option" onclick="quizAnswer('body')">Сразу перейти к мягкой работе с телом через массажные техники</button>
+        <button class="quiz-option" onclick="quizAnswer('both')">Начать с разговора, но под конец сделать лёгкую телесную диагностику</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="quiz-step" data-step="5">
+      <div class="quiz-question">Какой формат участия для вас актуален?</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="quizAnswer('solo')">Хочу прийти один или одна и поработать со своим личным запросом</button>
+        <button class="quiz-option" onclick="quizAnswer('pair')">Мы хотим прийти вдвоём с моим партнёром</button>
+        <button class="quiz-option" onclick="quizAnswer('edu')">Я хочу сам обучиться техникам массажа для практики</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="quiz-result" id="quizResult">
+      <h3 id="quizResultTitle"></h3>
+      <p id="quizResultText"></p>
+      <p class="quiz-bonus">Оставьте контакт в Telegram, и мы пришлём PDF-чек-лист подготовки и рекомендацию по формату сессии. Бесплатная 15-минутная встреча закрепляется за вами.</p>
+      <button class="quiz-submit" style="margin: 0 auto; display: block;" onclick="bookTg('Игорь, приветствую! Я прошел тест на сайте pozhidaev.ru, отправьте мне, пожалуйста, чек-лист подготовки и рекомендацию по формату сессии.','igor')">Получить разбор и чек-лист в Telegram</button>
+      <button class="quiz-restart" onclick="restartQuiz()">Пройти тест заново</button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (Фишка 8) -->
+<section class="section" id="reviews">
+  <div class="container">
+    <h2 class="section-title reveal">Отзывы</h2>
+    <div class="section-divider"></div>
+
+    <div class="reviews-toggle">
+      <button class="review-toggle-btn active" data-filter="all">Все отзывы</button>
+      <button class="review-toggle-btn" data-filter="massage">О массаже</button>
+      <button class="review-toggle-btn" data-filter="edu">Об обучении</button>
+    </div>
+
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Три недели назад решилась на йони-массаж как подарок себе на день рождения. К этой женской сути я шла больше десяти лет, через психологов, расстановки и тренинги. В его руках и полном принятии во мне что-то переключилось. Из серой незаметной мышки я превращаюсь в уверенную женщину, и это чувствуют окружающие.</p>
+        <div class="review-author">Клиентка, подарок себе</div>
+      </div>
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Один из самых потрясающих опытов в моей жизни. Игорь настоящий профессионал, очень внимательный, способен окружить заботой каждую клеточку тела. Я чувствовала себя в надёжных руках, любимой и желанной. Если вы ещё не пробовали, очень рекомендую, это опыт, который стоит прожить.</p>
+        <div class="review-author">Клиентка <span class="review-date">· 18 марта</span></div>
+      </div>
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Очень приятно было побывать на телесной терапии. Самое главное, я доверилась. Мне было тепло и не страшно с первого момента и до конца встречи. Так нежно до меня ещё никто не прикасался. У нас получилось.</p>
+        <div class="review-author">Клиентка, телесная терапия</div>
+      </div>
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Пришла с недоверием к мужчинам после развода и абьюзивных отношений. За плечами много практик и терапии. Придти к вам на массаж и довериться, это лучшее, что я сделала для себя. Такого бережного отношения к своему телу я не чувствовала никогда. У вас исключительный дар.</p>
+        <div class="review-author">Клиентка, после развода <span class="review-date">· 22.10.2025</span></div>
+      </div>
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">После рождения двойни я перестала воспринимать себя как женщину, была только мамой. Йони-массаж стал спасением. Я заново узнала себя, и через неделю впервые за два года сама потянулась к мужу. Теперь в зеркале вижу не просто мать, а красивую и желанную женщину.</p>
+        <div class="review-author">Клиентка, после родов</div>
+      </div>
+      <div class="review-card" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Всю жизнь в самый важный момент я будто вылетала из тела и начинала всё контролировать вместо того, чтобы чувствовать. Психологи не могли пробить этот панцирь, а здесь я впервые позволила себе просто быть. После массажа перестала зажиматься и научилась доверять. Отличная перезагрузка.</p>
+        <div class="review-author">Клиентка <span class="review-date">· 30.03.2026</span></div>
+      </div>
+      <div class="review-card extra" data-cat="edu">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Считал себя хорошим любовником, но после пятнадцати лет брака жена перестала хотеть. Пошёл на обучение йони-массажу, чтобы понять, может, дело во мне. Оказалось, я почти ничего не знал о женском теле, о ритме, о том, как важно не спешить. Теперь наша близость стала местом доверия. Рекомендую каждому мужчине.</p>
+        <div class="review-author">Мужчина, после обучения</div>
+      </div>
+      <div class="review-card extra" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Благодарю за новый невероятный опыт, за чуткость, нежность и потрясающую мужскую энергетику. Сознание до сих пор где-то летает. Не могу найти слов, чтобы это описать.</p>
+        <div class="review-author">Клиентка</div>
+      </div>
+      <div class="review-card extra" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">После нашей встречи изменилось моё отношение к себе и к мужчинам. Я счастлива. Появились новые знакомства, я стала желанной не только для мужчин, но и для себя.</p>
+        <div class="review-author">Клиентка</div>
+      </div>
+      <div class="review-card extra" data-cat="edu">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Работаю массажистом десять лет, но интимную зону всегда обходил стороной, не хватало знаний. Обучение у Игоря дало гораздо больше, чем я ожидал, не только технику, но и работу с травмой, границы и этику. Теперь чувствую, что делаю по-настоящему важную работу.</p>
+        <div class="review-author">Массажист, после обучения <span class="review-date">· 02.02.2026</span></div>
+      </div>
+      <div class="review-card extra" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Долго не решалась. Мне 42, за плечами развод и пять лет одиночества, тело будто замерло. После массажа мир перевернулся, вернулось ощущение себя женщиной. Захотелось красиво одеваться, танцевать, улыбаться. А через три дня со мной познакомился мужчина в кофейне, чего не было двадцать лет.</p>
+        <div class="review-author">Клиентка, 42 года <span class="review-date">· 18.12.2025</span></div>
+      </div>
+      <div class="review-card extra" data-cat="massage">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Этот массаж хотя бы раз в жизни должна попробовать каждая. Я даже не могла предположить, как много может сказать тебе твоё тело. Это время наедине с собой, и сколько при этом просыпается чувственности. Всем рекомендую, вы точно не пожалеете.</p>
+        <div class="review-author">Клиентка</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 32px;">
+      <button class="reviews-more" id="reviewsMore" onclick="expandReviews()">Показать ещё отзывы</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title reveal">Частые вопросы</h2>
+    <div class="section-divider"></div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Нужно ли раздеваться на консультации?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Нет. Консультация это разговор. К телесным практикам переходим отдельно, по запросу и с обсуждением.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Можно прийти с партнёром?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Да, есть парные консультации и практики. Можно прийти и одному.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Как записаться?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Оставляете контакты в форме, выбираете удобный период. Игорь связывается для подтверждения. Первые 15 минут бесплатно.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Это безопасно?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><p>Абсолютно. Границы, согласие и комфорт это основа. Вы всегда можете остановить процесс.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEO -->
+<section class="section geo-section">
+  <div class="container">
+    <h2 class="section-title reveal">География приёма</h2>
+    <div class="section-divider"></div>
+    <div class="geo-buttons reveal">
+      <button class="geo-btn active">Сочи (основной)</button>
+      <button class="geo-btn">Санкт-Петербург</button>
+      <button class="geo-btn">Новосибирск</button>
+      <button class="geo-btn">Краснодар</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + SMART FORM (Фишка 10) -->
+<section class="section" id="contact">
+  <div class="final-cta reveal">
+    <h2>Начнём со знакомства</h2>
+    <p>Первые 15 минут бесплатно. Вы расскажете о запросе, я отвечу, смогу ли помочь. Без обязательств.</p>
+
+    <p class="contact-hint">Оплаты на сайте нет. Пишите напрямую, обо всём договоримся лично.</p>
+    <div class="contact-tiles">
+      <a class="contact-tile tile-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg>
+        Написать Игорю в Telegram
+        <small>Ответим лично, быстро и анонимно</small>
+      </a>
+      <a class="contact-tile tile-wa" href="#" onclick="openWa('Здравствуйте, Игорь! Хочу записаться на консультацию.'); return false;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.4 2.6 1.6.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.2.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>
+        Написать в WhatsApp
+        <small>Если удобнее здесь</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="living-bg"><div class="pocket p1"></div><div class="pocket p2"></div></div>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Студия сексологии Игоря Пожидаева</div>
+      <div class="footer-links">
+        <a href="https://t.me/About_seks_is_easy" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.instagram.com/yonisochi" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://vk.ru/yoni_sochi" target="_blank" rel="noopener">VK</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
+      <div class="footer-geo">Сочи, Россия</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING TELEGRAM -->
+<a class="float-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg>
+</a>
+
+<!-- SAFE MODE BUTTON (Фишка 6) -->
+<button class="safe-mode-btn" onclick="toggleSafeMode()" title="Безопасный режим">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  <span class="sm-label-off">Приватность</span>
+  <span class="sm-label-on">Режим включён</span>
+</button>
+
+<!-- SERVICE POPUP (Фишка 3) -->
+<div class="modal-overlay" id="serviceModal" onclick="closeServiceModalOnBg(event)">
+  <div class="modal-box scroll-body">
+    <button class="modal-close" onclick="closeServiceModal()" aria-label="Закрыть">&times;</button>
+    <h3 id="modalTitle"></h3>
+    <div class="modal-meta" id="modalMeta"></div>
+    <p class="modal-intro" id="modalText"></p>
+    <div class="modal-steps" id="modalSteps"></div>
+    <button class="btn-primary" onclick="bookCurrent()">Занять слот</button>
+  </div>
+</div>
+
+<!-- VIDEO MODAL (Фишка 1) -->
+<div class="modal-overlay video-modal" id="videoModal" onclick="closeVideoModalOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeVideoModal()" aria-label="Закрыть">&times;</button>
+    <div class="video-frame">
+      <video id="heroFullVideo" src="hero-full.mp4" controls playsinline preload="metadata" style="width:100%; height:100%; object-fit:contain; background:#1A1010;"></video>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== TELEGRAM / WHATSAPP DEEPLINKS =====
+const TG_IGOR = 'https://t.me/PRO_cekc';       // TODO: заменить на реальный username Игоря
+const TG_EVGENIA = 'https://t.me/BOLMBOM'; // TODO: заменить на реальный username Евгении
+const WA_IGOR = 'https://wa.me/79189150906';           // TODO: заменить на реальный номер WhatsApp
+let currentBook = { msg: 'Здравствуйте! Хочу записаться на консультацию.', who: 'igor' };
+function bookTg(msg, who) { const base = (who === 'evgenia') ? TG_EVGENIA : TG_IGOR; window.open(base + '?text=' + encodeURIComponent(msg || ''), '_blank'); }
+function bookCurrent() { closeServiceModal(); bookTg(currentBook.msg, currentBook.who); }
+function openWa(msg) { window.open(WA_IGOR + '?text=' + encodeURIComponent(msg || 'Здравствуйте! Хочу записаться на консультацию.'), '_blank'); }
+
+// ===== SERVICE DATA =====
+const SERVICES = {
+  consultations: [
+    { title: 'Диагностическая встреча', price: 'Бесплатно', time: '15 мин', desc: 'Вводное знакомство. Вы кратко рассказываете о своей ситуации, я слушаю и говорю, смогу ли помочь в этом запросе. Это ни к чему не обязывает.', msg: 'Здравствуйте, Игорь! Хочу записаться на бесплатную диагностическую встречу.', who: 'igor' },
+    { title: 'Экспресс-консультация', price: '3 000 ₽', time: '30 мин', desc: 'Короткая точечная сессия. Подходит, когда нужно разобрать один конкретный вопрос, получить быструю диагностику и понятный план действий.', msg: 'Здравствуйте, Игорь! Хочу записаться на экспресс-консультацию.', who: 'igor' },
+    { title: 'Индивидуальная сессия', price: '5 000 ₽', time: '60 мин', desc: 'Глубокая работа с запросами о сексуальности, близости, внутренних страхах и блоках. Полное отсутствие табу. Мы находим корни проблемы и подбираем практики для их решения.', msg: 'Здравствуйте, Игорь! Хочу записаться к вам на индивидуальную консультацию.', who: 'igor' },
+    { title: 'Парная работа', price: '7 000 ₽', time: '1 ч 20 мин', desc: 'Сессия для пар. Помогает пройти через кризис, преодолеть дистанцию, бережно высказать накопленные обиды и вернуть утраченную близость.', msg: 'Здравствуйте, Игорь! Хочу записаться на парную консультацию.', who: 'igor' }
+  ],
+  practices: [
+    { title: 'Йони-массаж', price: '15 000 ₽', time: '120 мин', desc: 'Бережная телесная практика для женщин. Работа со скрытыми физическими зажимами, возвращением чувствительности и принятием себя. Глубокий контакт с телом в безопасной атмосфере.', msg: 'Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
+    { title: 'Йони-массаж Присутствие', price: '20 000 ₽', time: '2,5 ч', desc: 'Практика проводится для женщины в присутствии её партнёра. Совместный опыт, где мужчина учится бережно сопереживать, а женщина учится быть открытой. Укрепляет доверие в паре.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
+    { title: 'Парный йони-массаж Два поля, одна цельность', price: '23 000 ₽', time: '2,5 ч', desc: 'Тантрическая и телесная практика для пар, готовых к совместному исследованию чувственности. Синхронная работа с обоими партнёрами для объединения энергетики и снятия барьеров.', msg: 'Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.', who: 'igor', master: 'Синхронная работа двух мастеров: Игоря и Евгении', sensitive: true },
+    { title: 'Практика Сквирт', price: '6 000 ₽', time: '20-30 мин', desc: 'Интенсивная и сфокусированная телесная техника. Направлена на раскрытие природного потенциала тела, преодоление психологических барьеров и расширение границ чувствительности.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Сквирт.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
+    { title: 'Лингам-массаж', price: '25 000 ₽', time: '90 мин', desc: 'Лингам-массаж, это не секс и не стимуляция ради результата. Это бережная практика, которая снимает хроническое напряжение, восстанавливает чувствительность и возвращает мужчине связь с телом через присутствие. Проводит сертифицированный мастер Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true },
+    { title: 'Тантрический массаж', price: '12 000 ₽', time: '90 мин', desc: 'Медленная целостная практика для всего тела. Работа с дыханием и вниманием, где важен не финал, а сам процесс присутствия в теле и расслабления накопленного напряжения. Проводит Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на тантрический массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true },
+    { title: 'Эрогенный массаж', price: '10 000 ₽', time: '60 мин', desc: 'Мягкая работа с чувствительностью тела и снятием телесных блоков. Помогает вернуть остроту ощущений и живой контакт с собой в спокойном и безопасном темпе. Проводит Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на эрогенный массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true }
+  ],
+  education: [
+    { title: 'Обучение йони-массажу', price: 'от 40 000 ₽', time: '6-8 ч', desc: 'Интенсивный практический курс. Включает теорию, анатомию и пошаговую отработку техник. Два направления: для профессиональных практиков и для семейных пар.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.', who: 'igor', forever: true },
+    { title: 'Курс массажа йони', price: '50 000 ₽', time: '5 сеансов', desc: 'Полная терапевтическая программа. Постепенное мягкое погружение от базового расслабления до проработки глубоких психосоматических блоков за 5 встреч.', msg: 'Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.', who: 'igor', forever: true }
+  ]
+};
+
+// Карточки услуг статичны в HTML (видны без JS). Объект SERVICES нужен только
+// для поп-апа "Что входит?" с полным описанием.
+
+// Шаблоны шагов "Что входит в сеанс" по типу услуги
+const STEP_TEMPLATES = {
+  consultations: [
+    { t: 'Подготовка', d: 'Знакомство и разговор о том, что привело. Обозначаем запрос, я коротко объясняю, как устроена работа. Без оценок и без спешки.' },
+    { t: 'Процесс', d: 'Разбираем ситуацию по шагам. Я задаю вопросы, вы делитесь тем, чем готовы. Ищем корни и подбираем формат дальнейшей работы.' },
+    { t: 'Завершение', d: 'Подводим итог встречи, намечаем следующий шаг. Вы уходите с ясностью, что делать дальше, без давления и обязательств.' }
+  ],
+  practices: [
+    { t: 'Подготовка', d: 'Тёплый душ, мягкий халат и чай. Короткая беседа-сонастройка, обозначаем границы и договариваемся о стоп-слове. Вы задаёте темп.' },
+    { t: 'Процесс', d: 'Бережная работа без спешки и давления. Прикосновение внимательное и уважительное, ничего не происходит без вашего согласия. В любой момент можно остановиться.' },
+    { t: 'Завершение', d: 'Время побыть в тишине и прожить ощущения, ассимиляция чувств. Спокойная обратная связь, вода, и вы уходите в своём ритме.' }
+  ],
+  education: [
+    { t: 'Подготовка', d: 'Разбираем теорию и анатомию, отвечаю на все вопросы. Настраиваемся на практику в спокойном темпе.' },
+    { t: 'Процесс', d: 'Пошаговая отработка техник под моим наблюдением. Столько повторов, сколько нужно для уверенности в руках.' },
+    { t: 'Завершение', d: 'Разбор ошибок, честная обратная связь и материалы, чтобы вы могли продолжать практиковать самостоятельно.' }
+  ]
+};
+
+// ===== SERVICE MODAL (Фишка 3) =====
+function openServiceModal(key, i) {
+  const s = SERVICES[key][i];
+  document.getElementById('modalTitle').textContent = s.title;
+  document.getElementById('modalMeta').textContent = s.price + ' · ' + s.time + (s.master ? ' · ' + s.master : '');
+  document.getElementById('modalText').textContent = s.desc;
+  currentBook = { msg: s.msg, who: s.who };
+  const steps = STEP_TEMPLATES[key] || STEP_TEMPLATES.practices;
+  document.getElementById('modalSteps').innerHTML = steps.map((st, n) => `
+    <div class="modal-step">
+      <div class="modal-step-num">${n + 1}</div>
+      <div class="modal-step-body">
+        <h5>${st.t}</h5>
+        <p>${st.d}</p>
+      </div>
+    </div>`).join('');
+  const box = document.querySelector('#serviceModal .modal-box');
+  if (box) box.scrollTop = 0;
+  document.getElementById('serviceModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeServiceModal() {
+  document.getElementById('serviceModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeServiceModalOnBg(e) {
+  if (e.target === document.getElementById('serviceModal')) closeServiceModal();
+}
+
+// ===== VIDEO MODAL (Фишка 1) =====
+function openVideoModal() {
+  document.getElementById('videoModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  const v = document.getElementById('heroFullVideo');
+  if (v) { try { v.currentTime = 0; v.play(); } catch(e){} }
+}
+function closeVideoModal() {
+  document.getElementById('videoModal').classList.remove('open');
+  document.body.style.overflow = '';
+  const v = document.getElementById('heroFullVideo');
+  if (v) v.pause();
+}
+function closeVideoModalOnBg(e) {
+  if (e.target === document.getElementById('videoModal')) closeVideoModal();
+}
+
+// ESC закрывает модалки
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { closeServiceModal(); closeVideoModal(); }
+});
+
+// ===== HEADER SCROLL =====
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ===== MOBILE NAV =====
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ===== TABS (Фишка 2) =====
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  const btn = document.querySelector(`[data-tab="${tabId}"]`);
+  if (btn) btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+// ===== FAQ ACCORDION =====
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+// ===== SAFE MODE (Фишка 6) =====
+function toggleSafeMode() {
+  document.body.classList.toggle('safe-mode');
+  document.querySelector('.safe-mode-btn').classList.toggle('active');
+}
+
+// ===== FORM TAGS (Фишка 10) =====
+function toggleTag(btn) {
+  // внутри одной группы выбираем один вариант
+  btn.parentElement.querySelectorAll('.form-tag').forEach(t => { if (t !== btn) t.classList.remove('selected'); });
+  btn.classList.toggle('selected');
+}
+
+// ===== GEO CHIPS =====
+document.querySelectorAll('.geo-chip, .geo-btn').forEach(chip => {
+  chip.addEventListener('click', function() {
+    this.parentElement.querySelectorAll('.geo-chip, .geo-btn').forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ===== REVIEW FILTER (Фишка 8) =====
+// ===== REVIEWS: фильтр + показать ещё (Фишка 8) =====
+let reviewFilter = 'all', reviewsExpanded = false;
+function applyReviews() {
+  const cards = Array.from(document.querySelectorAll('#reviewsGrid .review-card'));
+  let shown = 0, total = 0;
+  cards.forEach(c => {
+    const match = reviewFilter === 'all' || c.dataset.cat === reviewFilter;
+    if (!match) { c.style.display = 'none'; return; }
+    total++;
+    shown++;
+    c.style.display = (reviewsExpanded || shown <= 6) ? '' : 'none';
+  });
+  const more = document.getElementById('reviewsMore');
+  if (more) more.style.display = (total > 6 && !reviewsExpanded) ? '' : 'none';
+}
+function expandReviews() { reviewsExpanded = true; applyReviews(); }
+document.querySelectorAll('.review-toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.review-toggle-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    reviewFilter = this.dataset.filter;
+    reviewsExpanded = false;
+    applyReviews();
+  });
+});
+applyReviews();
+
+// защита текста отзывов от копирования
+document.querySelectorAll('.review-text').forEach(el => {
+  el.addEventListener('copy', e => e.preventDefault());
+  el.addEventListener('contextmenu', e => e.preventDefault());
+});
+
+// ===== SCROLL TO ELEMENT =====
+function scrollToEl(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== QUIZ LOGIC (Фишка 7) =====
+let quizStep = 1;
+let quizScores = { psy: 0, body: 0 };
+let quizFormat = '';
+
+function quizAnswer(type) {
+  if (type === 'both') { quizScores.psy++; quizScores.body++; }
+  else if (type === 'psy') quizScores.psy++;
+  else if (type === 'body') quizScores.body++;
+  else quizFormat = type; // solo / pair / edu (вопрос 5)
+
+  quizStep++;
+  updateQuizProgress();
+
+  if (quizStep <= 5) {
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+    document.querySelector(`[data-step="${quizStep}"]`).classList.add('active');
+  } else {
+    showQuizResult();
+  }
+}
+
+function updateQuizProgress() {
+  const shown = Math.min(quizStep, 5);
+  document.getElementById('quizProgress').style.width = (Math.min(quizStep - 1, 5)) * 20 + '%';
+  document.getElementById('quizCounter').textContent = shown + ' из 5';
+}
+
+function showQuizResult() {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('quizProgress').style.width = '100%';
+  document.getElementById('quizCounter').textContent = 'Готово';
+
+  const title = document.getElementById('quizResultTitle');
+  const text = document.getElementById('quizResultText');
+
+  if (quizFormat === 'edu') {
+    title.textContent = 'Вам подойдёт курс обучения';
+    text.textContent = 'Вам идеально подходит профессиональный курс обучения массажу йони для пар или практиков. Теория, анатомия и отработка техник под руководством Игоря.';
+  } else if (quizScores.body > quizScores.psy) {
+    title.textContent = 'Вам подойдут телесные практики';
+    text.textContent = 'Вам лучше всего подойдут глубокие телесные практики, например йони или лингам-массаж. Это кратчайший путь к расслаблению, снятию хронических зажимов и полному принятию себя.';
+  } else {
+    title.textContent = 'Ваш формат, консультация';
+    text.textContent = 'Ваш идеальный формат, это индивидуальная или парная консультация. Она поможет снять ментальные блоки, проговорить скрытые страхи и вернуть ясность в мысли и отношения.';
+  }
+  document.getElementById('quizResult').classList.add('active');
+}
+
+function restartQuiz() {
+  quizStep = 1;
+  quizScores = { psy: 0, body: 0 };
+  quizFormat = '';
+  document.getElementById('quizResult').classList.remove('active');
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.querySelector('[data-step="1"]').classList.add('active');
+  updateQuizProgress();
+}
+
+// ===== SCROLL REVEAL =====
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => revealObserver.observe(el));
+
+// ===== COUNTER ANIMATION (Фишка 9) =====
+const counterEls = document.querySelectorAll('.counter-num');
+let countersDone = false;
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !countersDone) {
+      countersDone = true;
+      counterEls.forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        function animate(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(target * eased) + (progress === 1 ? suffix : '');
+          if (progress < 1) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+      });
+    }
+  });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterObserver.observe(el));
+
+// ===== CUSTOM CURSOR + МАГНИТ (только desktop) =====
+(function() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  document.body.classList.add('custom-cursor');
+  const dot = document.createElement('div'); dot.className = 'cursor-dot';
+  const ring = document.createElement('div'); ring.className = 'cursor-ring';
+  document.body.append(dot, ring);
+
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let rx = mx, ry = my, magnet = null;
+
+  window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  window.addEventListener('mouseout', e => { if (!e.relatedTarget) { dot.style.opacity = '0'; ring.style.opacity = '0'; } });
+  window.addEventListener('mouseover', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+
+  const magnets = document.querySelectorAll('.svc-btn-fill, .svc-btn-outline, .btn-primary, .btn-outline, .nav-card, .safety-point, .quiz-submit, .quiz-option, .tab-btn, .play-btn');
+  magnets.forEach(el => {
+    el.addEventListener('mouseenter', () => { ring.classList.add('grow'); magnet = el; });
+    el.addEventListener('mouseleave', () => { ring.classList.remove('grow'); magnet = null; });
+  });
+
+  function loop() {
+    let tx = mx, ty = my;
+    if (magnet && document.body.contains(magnet)) {
+      const r = magnet.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      tx = mx + (cx - mx) * 0.35;
+      ty = my + (cy - my) * 0.35;
+    }
+    rx += (tx - rx) * 0.18;
+    ry += (ty - ry) * 0.18;
+    dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+
+</body>
+</html>
