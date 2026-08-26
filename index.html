@@ -2316,16 +2316,17 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// ===== TREE GROW ON SCROLL (robust scroll-based) =====
-function checkGrowTrees(){
-  document.querySelectorAll('.tree-grow:not(.visible)').forEach(function(el){
+// ===== TREE GROW (rAF watcher, container-agnostic) =====
+(function watchGrowTrees(){
+  var pending = document.querySelectorAll('.tree-grow:not(.visible)');
+  if (!pending.length) return;               // done, stop the loop
+  var vh = window.innerHeight;
+  pending.forEach(function(el){
     var r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight * 0.85 && r.bottom > 0) el.classList.add('visible');
+    if (r.top < vh * 0.88 && r.bottom > 40) el.classList.add('visible');
   });
-}
-window.addEventListener('scroll', checkGrowTrees, { passive: true });
-window.addEventListener('resize', checkGrowTrees);
-checkGrowTrees();
+  requestAnimationFrame(watchGrowTrees);
+})();
 
 // ===== COUNTER ANIMATION (Фишка 9) =====
 const counterEls = document.querySelectorAll('.counter-num');
