@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
 <title>Игорь Пожидаев, психолог-сексолог | Телесно-ориентированная терапия</title>
 <meta name="description" content="Услуги дипломированного психолога-сексолога Игоря Пожидаева. Индивидуальные и парные консультации, телесно-ориентированные практики и обучение в Сочи, Санкт-Петербурге, Краснодаре и Новосибирске. Бережно, анонимно, без осуждения.">
 <meta name="keywords" content="психолог сексолог сочи, семейный психолог спб, телесно ориентированная терапия краснодар, консультация сексолога новосибирск, студия сексологии игоря пожидаева, парная консультация">
@@ -40,6 +41,7 @@ h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-h
 
 /* ===== COLORS ===== */
 :root {
+  color-scheme: only light;
   --cream: #FDF8F0;
   --cream-dark: #F3EBE0;
   --bordo: #5C1A1B;
@@ -533,7 +535,8 @@ body::after {
 }
 .service-price { font-size: 20px; font-weight: 600; color: var(--bordo); font-family: 'Cormorant Garamond', serif; }
 .service-time { font-size: 13px; color: var(--text-muted); }
-.service-buttons { display: flex; gap: 10px; }
+.service-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.service-buttons .svc-btn-fill { white-space: nowrap; }
 .svc-btn-outline {
   flex: 1;
   min-height: 44px;
@@ -569,6 +572,10 @@ body::after {
 .contact-tile small { font-weight: 400; font-size: 12.5px; opacity: 0.9; }
 .tile-tg { background: #229ED9; }
 .tile-wa { background: #25D366; }
+.tile-phone { background: var(--bordo, #5c1a1b); }
+.tile-max { background: #6C4BF4; }
+.contact-tiles:has(.tile-phone) { max-width: 760px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 560px) { .contact-tiles:has(.tile-phone) { grid-template-columns: 1fr; } }
 .contact-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.16); }
 .contact-hint { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 22px; }
 @media (max-width: 560px) { .contact-tiles { grid-template-columns: 1fr; } }
@@ -782,7 +789,7 @@ body.safe-mode .sensitive:hover { filter: blur(0); }
 /* ===== QUIZ (Фишка 7) ===== */
 .quiz-section { background: var(--bordo); color: var(--cream); border-radius: 32px; padding: 60px; margin: 0 24px; }
 .quiz-section h2 { color: var(--cream); text-align: center; margin-bottom: 8px; }
-.quiz-sub { text-align: center; color: rgba(253,248,240,0.7); font-size: 16px; margin-bottom: 40px; }
+.quiz-sub { text-align: center; color: rgba(253,248,240,0.88); font-size: 16px; margin-bottom: 40px; }
 
 .quiz-progress-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
 .quiz-progress {
@@ -1207,10 +1214,10 @@ svg.tree { fill: var(--gold); display:block; }
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://pozhidaev-sexolog.ru/">
 <script type="application/ld+json">
-{"@context": "https://schema.org","@type": "LocalBusiness","name": "Студия сексологии Игоря Пожидаева","url": "https://pozhidaev-sexolog.ru/","image": "https://pozhidaev-sexolog.ru/og-image.jpg","description": "Психолог-сексолог Игорь Пожидаев. Индивидуальные и парные консультации, телесно-ориентированная терапия, обучение. Сочи, Санкт-Петербург, Новосибирск, Краснодар.","address": {"@type": "PostalAddress","addressLocality": "Сочи","addressCountry": "RU"},"areaServed": ["Сочи","Санкт-Петербург","Новосибирск","Краснодар"],"sameAs": ["https://t.me/PRO_cekc","https://www.instagram.com/yonisochi","https://vk.ru/yoni_sochi"],"founder": {"@type": "Person","name": "Игорь Пожидаев","jobTitle": "Психолог-сексолог"},"aggregateRating": {"@type": "AggregateRating","ratingValue": "5","reviewCount": "12"}}
+{"@context": "https://schema.org","@type": "LocalBusiness","name": "Студия сексологии Игоря Пожидаева","url": "https://pozhidaev-sexolog.ru/","image": "https://pozhidaev-sexolog.ru/og-image.jpg","description": "Психолог-сексолог Игорь Пожидаев. Индивидуальные и парные консультации, телесно-ориентированная терапия, обучение. Сочи, Санкт-Петербург, Новосибирск, Краснодар.","address": {"@type": "PostalAddress","addressLocality": "Сочи","addressCountry": "RU"},"telephone": "+79189150906","areaServed": ["Сочи","Санкт-Петербург","Новосибирск","Краснодар"],"sameAs": ["https://t.me/PRO_cekc","https://www.instagram.com/yonisochi","https://vk.ru/yoni_sochi"],"founder": {"@type": "Person","name": "Игорь Пожидаев","jobTitle": "Психолог-сексолог"},"aggregateRating": {"@type": "AggregateRating","ratingValue": "5","reviewCount": "12"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Нужно ли раздеваться на консультации?","acceptedAnswer": {"@type": "Answer","text": "Нет. Консультация это разговор. К телесным практикам переходим отдельно, по запросу и с обсуждением."}},{"@type": "Question","name": "Можно прийти с партнёром?","acceptedAnswer": {"@type": "Answer","text": "Да, есть парные консультации и практики. Можно прийти и одному."}},{"@type": "Question","name": "Как записаться?","acceptedAnswer": {"@type": "Answer","text": "Оставляете контакты, выбираете удобный период. Игорь связывается для подтверждения. Первые 15 минут бесплатно."}},{"@type": "Question","name": "Это безопасно?","acceptedAnswer": {"@type": "Answer","text": "Абсолютно. Границы, согласие и комфорт это основа. Вы всегда можете остановить процесс."}}]}
+{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Нужно ли раздеваться на консультации?","acceptedAnswer": {"@type": "Answer","text": "Нет. Консультация это разговор. К телесным практикам переходим отдельно, по запросу и с обсуждением."}},{"@type": "Question","name": "Можно прийти с партнёром?","acceptedAnswer": {"@type": "Answer","text": "Да, есть парные консультации и практики."}},{"@type": "Question","name": "Как записаться?","acceptedAnswer": {"@type": "Answer","text": "Оставляете контакты, выбираете удобный период. Игорь связывается для подтверждения. Первые 15 минут бесплатно."}},{"@type": "Question","name": "Это безопасно?","acceptedAnswer": {"@type": "Answer","text": "Абсолютно. Границы, согласие и комфорт это основа. Вы всегда можете остановить процесс."}}]}
 </script>
 </head>
 <body>
@@ -1466,7 +1473,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
     <div class="hero-grid">
       <div class="hero-content">
         <h1>Близость начинается с <em>доверия к себе</em></h1>
-        <p class="hero-sub">Психолог-сексолог, практик телесной работы. Помогаю вернуть контакт с телом, разобраться в желаниях и углубить отношения с партнёром.</p>
+        <p class="hero-sub">Психолог-сексолог, мастер телесных практик. Уже более семи лет иду по тонкой грани между психологией и телесностью: помогаю вернуть контакт с телом, разобраться в желаниях и углубить отношения с партнёром. Здесь можно задать любой «неправильный» вопрос и получить честный ответ, быть уязвимой и при этом сильной. Пространство без осуждения, где о сокровенном говорят прямо.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn-primary">Записаться бесплатно</a>
           <a href="#navigator" class="btn-outline">Узнать больше</a>
@@ -1611,52 +1618,54 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Йони-массаж</h4>
-          <p class="service-desc sensitive">Бережная телесная практика для женщин. Работа со скрытыми зажимами, возвращением чувствительности и принятием себя.</p>
-          <p class="service-master">Мастер: Игорь Пожидаев</p>
+          <p class="service-desc sensitive">Это не секс и не процедура. Бережное прикосновение снимает телесные и эмоциональные зажимы, пробуждает чувственность и восстанавливает связь с женской энергией. После сеанса две бесплатные консультации по 15 минут.</p>
+          <p class="service-master">Мастера: Игорь или Евгения, на выбор</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.','igor')" title="Записаться">15 000 ₽</span>
+            <span class="service-price">15 000 ₽</span>
             <span class="service-time">120 мин</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('practices', 0)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.','igor')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.','igor')">К Игорю</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Евгения! Хочу записаться к вам на практику Йони-массажа.','evgenia')">К Евгении</button>
           </div>
         </div>
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Йони-массаж Присутствие</h4>
-          <p class="service-desc sensitive">Практика для женщины в присутствии её партнёра. Совместный опыт, который укрепляет доверие в паре на глубинном уровне.</p>
-          <p class="service-master">Мастер: Игорь Пожидаев</p>
+          <p class="service-desc sensitive">Практика для женщины, партнёр рядом. Он не массирует: он учится держать пространство, чувствовать дыхание и доверять телу партнёрши. Это практика доверия, из которой пара выходит с новым языком близости.</p>
+          <p class="service-master">Мастера: Игорь или Евгения, на выбор</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.','igor')" title="Записаться">20 000 ₽</span>
+            <span class="service-price">20 000 ₽</span>
             <span class="service-time">2,5 ч</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('practices', 1)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.','igor')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.','igor')">К Игорю</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Евгения! Хочу записаться на практику Йони-массаж Присутствие.','evgenia')">К Евгении</button>
           </div>
         </div>
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
-          <h4 class="sensitive">Парный йони-массаж Два поля, одна цельность</h4>
-          <p class="service-desc sensitive">Тантрическая и телесная практика для пар. Синхронная работа с обоими партнёрами для снятия барьеров.</p>
-          <p class="service-master">Синхронная работа двух мастеров: Игоря и Евгении</p>
+          <h4 class="sensitive">Парный йони-массаж Два поля, одна ценность</h4>
+          <p class="service-desc sensitive">Практика для одной женщины, которую одновременно ведут два мастера. Это не массаж вдвоём, а гармония двух присутствий: мужская и женская энергия работают для тебя одной. Нет страха быть оценённой, есть только ты и право чувствовать.</p>
+          <p class="service-master">Два мастера одновременно: Игорь и Евгения</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.','igor')" title="Записаться">23 000 ₽</span>
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте! Хочу записаться на практику Два поля, одна ценность.','igor')" title="Записаться">23 000 ₽</span>
             <span class="service-time">2,5 ч</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('practices', 2)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.','igor')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте! Хочу записаться на практику Два поля, одна ценность.','igor')">Занять слот</button>
           </div>
         </div>
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Практика Сквирт</h4>
-          <p class="service-desc sensitive">Интенсивная и сфокусированная техника. Раскрытие природного потенциала тела и расширение границ чувствительности.</p>
+          <p class="service-desc sensitive">Глубокое расслабление тазового дна, при котором тело отпускает контроль и растворяется в нежной, растекающейся по всему телу волне удовольствия. После, тишина в голове и мягкость во всём теле.</p>
           <p class="service-master">Мастер: Игорь Пожидаев</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Сквирт.','igor')" title="Записаться">6 000 ₽</span>
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на практику Сквирт.','igor')" title="Записаться">8 000 ₽</span>
             <span class="service-time">20-30 мин</span>
           </div>
           <div class="service-buttons">
@@ -1668,7 +1677,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Лингам-массаж</h4>
           <p class="service-desc sensitive">Лингам-массаж, это не секс и не стимуляция ради результата. Это бережная практика, которая снимает хроническое напряжение и возвращает мужчине связь с телом через присутствие.</p>
-          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <p class="service-master">Проводит сертифицированный мастер Евгения Болмасова</p>
           <div class="service-meta">
             <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.','evgenia')" title="Записаться">25 000 ₽</span>
             <span class="service-time">90 мин</span>
@@ -1681,22 +1690,23 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Тантрический массаж</h4>
-          <p class="service-desc sensitive">Медленная целостная практика для всего тела. Работа с дыханием и вниманием, где важен сам процесс присутствия.</p>
-          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <p class="service-desc sensitive">Искусство медленного присутствия, где удовольствие не цель, а состояние. Подходит и мужчинам, и женщинам: снимает глубинное напряжение, пробуждает чувственность и учит слышать своё тело без слов.</p>
+          <p class="service-master">Мастера: Игорь или Евгения, на выбор</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на тантрический массаж.','evgenia')" title="Записаться">12 000 ₽</span>
+            <span class="service-price">12 000 ₽</span>
             <span class="service-time">90 мин</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('practices', 5)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на тантрический массаж.','evgenia')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на тантрический массаж.','igor')">К Игорю</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Евгения! Хочу записаться на тантрический массаж.','evgenia')">К Евгении</button>
           </div>
         </div>
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Эрогенный массаж</h4>
-          <p class="service-desc sensitive">Мягкая работа с чувствительностью тела и снятием блоков. Возвращает остроту ощущений и живой контакт с собой.</p>
-          <p class="service-master">Проводит сертифицированный мастер Евгения Пожидаева</p>
+          <p class="service-desc sensitive">Деликатный диалог с телом, в котором каждое прикосновение пробуждает чувственность и возвращает способность чувствовать удовольствие без контроля и спешки. Подходит и мужчинам, и женщинам.</p>
+          <p class="service-master">Проводит сертифицированный мастер Евгения Болмасова</p>
           <div class="service-meta">
             <span class="service-price price-book" onclick="bookTg('Здравствуйте, хочу записаться к Евгении на эрогенный массаж.','evgenia')" title="Записаться">10 000 ₽</span>
             <span class="service-time">60 мин</span>
@@ -1715,27 +1725,53 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
           <h4>Обучение йони-массажу</h4>
-          <p class="service-desc">Интенсивный практический курс. Теория, анатомия и отработка техник. Два направления: для практиков и для семейных пар.</p>
+          <p class="service-desc">Йони-массаж как сакральная практика исцеления женской телесности. Техники, дыхание, психологическая безопасность. Два пути: для практиков и для пар.</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.','igor')" title="Записаться">от 40 000 ₽</span>
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение йони-массажу.','igor')" title="Записаться">от 40 000 ₽</span>
             <span class="service-time">6-8 ч</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('education', 0)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.','igor')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение йони-массажу.','igor')">Занять слот</button>
           </div>
         </div>
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
-          <h4>Курс массажа йони</h4>
-          <p class="service-desc">Полная терапевтическая программа. Мягкое погружение от базового расслабления до проработки глубоких блоков за 5 встреч.</p>
+          <h4>Обучение лингам-массажу</h4>
+          <p class="service-desc">Анатомия и психология мужчины, алгоритм безопасного воздействия, проработка мышечных зажимов. Востребованная профессия на стыке заботы и чувственного исцеления.</p>
           <div class="service-meta">
-            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.','igor')" title="Записаться">50 000 ₽</span>
-            <span class="service-time">5 сеансов</span>
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение лингам-массажу.','igor')" title="Записаться">40 000 ₽</span>
+            <span class="service-time">интенсив</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('education', 1)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.','igor')">Занять слот</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение лингам-массажу.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
+          <h4>Обучение тантрическому массажу</h4>
+          <p class="service-desc">Тантрический массаж всего тела без интимных зон. Плавные вибрационные техники и дыхательные практики, которые снимают зажимы и возвращают чувствительность.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение тантрическому массажу.','igor')" title="Записаться">30 000 ₽</span>
+            <span class="service-time">интенсив</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('education', 2)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение тантрическому массажу.','igor')">Занять слот</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-tags-row"><span class="service-tag tag-education">Обучение</span><span class="service-tag tag-forever">Доступ навсегда</span></div>
+          <h4>Обучение эрогенному массажу</h4>
+          <p class="service-desc">Мягкая практика проработки телесных зажимов через энергоцентры и нервные окончания, без интимных зон. Текучие техники, которые высвобождают энергию.</p>
+          <div class="service-meta">
+            <span class="service-price price-book" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение эрогенному массажу.','igor')" title="Записаться">20 000 ₽</span>
+            <span class="service-time">интенсив</span>
+          </div>
+          <div class="service-buttons">
+            <button class="svc-btn-outline" onclick="openServiceModal('education', 3)">Что входит?</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на обучение эрогенному массажу.','igor')">Занять слот</button>
           </div>
         </div>
       </div>
@@ -1762,7 +1798,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
       <div class="step-card reveal">
         <div class="step-num">03</div>
         <h4>Работа</h4>
-        <p>Проходим сессии, телесные практики, вы получаете домашние наблюдения.</p>
+        <p>Проходим сессии, телесные практики, вы получаете домашние задания.</p>
       </div>
       <div class="step-card reveal">
         <div class="step-num">04</div>
@@ -1779,14 +1815,18 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
   <div class="living-bg"><div class="pocket p1"></div><div class="pocket p2"></div><div class="pocket p3"></div></div>
   <div class="container">
     <h2 class="section-title reveal">Безопасность и комфорт</h2>
-    <p class="section-sub reveal">Каждая деталь студии создана для вашего спокойствия</p>
+    <p class="section-sub reveal">Каждая деталь пространства создана для вашего спокойствия</p>
     <div class="safety-grid">
       <div class="safety-visual reveal">
         <img src="studio-room.jpg" alt="Кабинет студии при свечах">
       </div>
       <div class="safety-points">
         <div class="safety-point reveal">
-          <h4><span class="safety-point-dot"></span>Атмосфера</h4>
+          <h4><span class="safety-point-dot"></span>Кабинет для консультаций</h4>
+          <p>Разговорные сессии проходят в кабинете психолога-сексолога: два кресла, мягкий свет, тишина. Комфорт, порядок и полная конфиденциальность, ничего лишнего.</p>
+        </div>
+        <div class="safety-point reveal">
+          <h4><span class="safety-point-dot"></span>Студия для телесных практик</h4>
           <p>Приглушенный теплый свет, мягкие маты и натуральные аромамасла. Вы можете сами выбрать музыкальное сопровождение или остаться в полной тишине.</p>
         </div>
         <div class="safety-point reveal">
@@ -1823,11 +1863,11 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <div class="about-photo"><img src="igor.jpg" alt="Игорь Пожидаев, психолог-сексолог"></div>
         <div class="about-text">
           <h3>Игорь Пожидаев</h3>
-          <p class="dropcap">Психолог-сексолог с пятилетним опытом. Работаю с темами близости, сексуальности, телесного доверия. Совмещаю психологическую консультацию с телесными практиками.</p>
-          <p>Живу и принимаю в Сочи. Выезжаю в Санкт-Петербург, Новосибирск, Краснодар. Обучаю технике йони-массажа практиков и пары.</p>
+          <p class="dropcap">Психолог-сексолог, практикую с 2019 года. Работаю с темами близости, сексуальности, телесного доверия. Совмещаю психологическую консультацию с телесными практиками.</p>
+          <p>Живу и принимаю в Сочи. Выезжаю в Санкт-Петербург, Новосибирск, Краснодар. Обучаю технике телесных практик, мастеров и семейные пары.</p>
           <div class="counters">
             <div class="counter">
-              <div class="counter-num" data-target="5" data-suffix="+">5+</div>
+              <div class="counter-num" data-target="7" data-suffix="+">7+</div>
               <div class="counter-label">лет практики</div>
             </div>
             <div class="counter">
@@ -1842,10 +1882,10 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         </div>
       </div>
       <div class="about-person reveal">
-        <div class="about-photo"><img src="evgenia.jpg" alt="Евгения Пожидаева, мастер телесных практик"></div>
+        <div class="about-photo"><img src="evgenia.jpg" alt="Евгения Болмасова, мастер телесных практик"></div>
         <div class="about-text">
-          <h3>Евгения Пожидаева</h3>
-          <p>Мастер телесных практик. Специализируется на лингам-массаже для мужчин и женщин, парных телесных практиках.</p>
+          <h3>Евгения Болмасова</h3>
+          <p>Сертифицированный специалист телесных практик. Ведёт направления, где нужна женская энергия: лингам-массаж и эрогенный для мужчин, йони-массаж, тантрический и эрогенный для женщин.</p>
           <p>Работает в паре с Игорем. Создаёт безопасное пространство, в котором ваше тело может полностью расслабиться и раскрыться.</p>
         </div>
       </div>
@@ -2026,7 +2066,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
           Можно прийти с партнёром?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-answer"><p>Да, есть парные консультации и практики. Можно прийти и одному.</p></div>
+        <div class="faq-answer"><p>Да, есть парные консультации и практики.</p></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
@@ -2078,6 +2118,16 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         Написать в WhatsApp
         <small>Если удобнее здесь</small>
       </a>
+      <a class="contact-tile tile-max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg>
+        Написать в Max
+        <small>Работает без wi-fi и VPN</small>
+      </a>
+      <a class="contact-tile tile-phone" href="tel:+79189150906">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        Позвонить
+        <small>+7 918 915-09-06</small>
+      </a>
     </div>
   </div>
 </section>
@@ -2085,7 +2135,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 <!-- CLOSING TREE -->
 <section class="closing-tree">
   <svg class="closing-tree-svg reveal" aria-hidden="true"><use href="#tree"/></svg>
-  <p class="closing-line reveal">Близость начинается с доверия. К себе, к своему телу, к другому.</p>
+  <p class="closing-line reveal">Близость начинается с доверия. К себе и к своему телу.</p>
 </section>
 
 <!-- FOOTER -->
@@ -2126,7 +2176,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
     <div class="modal-meta" id="modalMeta"></div>
     <p class="modal-intro" id="modalText"></p>
     <div class="modal-steps" id="modalSteps"></div>
-    <button class="btn-primary" onclick="bookCurrent()">Занять слот</button>
+    <div id="modalBook"><button class="btn-primary" onclick="bookCurrent()">Занять слот</button></div>
   </div>
 </div>
 
@@ -2159,17 +2209,19 @@ const SERVICES = {
     { title: 'Парная работа', price: '7 000 ₽', time: '1 ч 20 мин', desc: 'Сессия для пар. Помогает пройти через кризис, преодолеть дистанцию, бережно высказать накопленные обиды и вернуть утраченную близость.', msg: 'Здравствуйте, Игорь! Хочу записаться на парную консультацию.', who: 'igor' }
   ],
   practices: [
-    { title: 'Йони-массаж', price: '15 000 ₽', time: '120 мин', desc: 'Бережная телесная практика для женщин. Работа со скрытыми физическими зажимами, возвращением чувствительности и принятием себя. Глубокий контакт с телом в безопасной атмосфере.', msg: 'Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
-    { title: 'Йони-массаж Присутствие', price: '20 000 ₽', time: '2,5 ч', desc: 'Практика проводится для женщины в присутствии её партнёра. Совместный опыт, где мужчина учится бережно сопереживать, а женщина учится быть открытой. Укрепляет доверие в паре.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
-    { title: 'Парный йони-массаж Два поля, одна цельность', price: '23 000 ₽', time: '2,5 ч', desc: 'Тантрическая и телесная практика для пар, готовых к совместному исследованию чувственности. Синхронная работа с обоими партнёрами для объединения энергетики и снятия барьеров.', msg: 'Здравствуйте! Хотим записаться на парную практику Два поля, одна цельность.', who: 'igor', master: 'Синхронная работа двух мастеров: Игоря и Евгении', sensitive: true },
-    { title: 'Практика Сквирт', price: '6 000 ₽', time: '20-30 мин', desc: 'Интенсивная и сфокусированная телесная техника. Направлена на раскрытие природного потенциала тела, преодоление психологических барьеров и расширение границ чувствительности.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Сквирт.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
-    { title: 'Лингам-массаж', price: '25 000 ₽', time: '90 мин', desc: 'Лингам-массаж, это не секс и не стимуляция ради результата. Это бережная практика, которая снимает хроническое напряжение, восстанавливает чувствительность и возвращает мужчине связь с телом через присутствие. Проводит сертифицированный мастер Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true },
-    { title: 'Тантрический массаж', price: '12 000 ₽', time: '90 мин', desc: 'Медленная целостная практика для всего тела. Работа с дыханием и вниманием, где важен не финал, а сам процесс присутствия в теле и расслабления накопленного напряжения. Проводит Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на тантрический массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true },
-    { title: 'Эрогенный массаж', price: '10 000 ₽', time: '60 мин', desc: 'Мягкая работа с чувствительностью тела и снятием телесных блоков. Помогает вернуть остроту ощущений и живой контакт с собой в спокойном и безопасном темпе. Проводит Евгения Пожидаева.', msg: 'Здравствуйте, хочу записаться к Евгении на эрогенный массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Пожидаева', sensitive: true }
+    { title: 'Йони-массаж', price: '15 000 ₽', time: '120 мин', desc: 'Это не секс и не процедура. Через бережное прикосновение снимаем телесные и эмоциональные зажимы, пробуждаем чувственность и восстанавливаем связь с женской энергией. Не обязательно быть готовой, можно просто прийти как есть. После сеанса две бесплатные консультации по 15 минут.', msg: 'Здравствуйте, Игорь! Хочу записаться к вам на практику Йони-массажа.', who: 'igor', msg2: 'Здравствуйте, Евгения! Хочу записаться к вам на практику Йони-массажа.', who2: 'evgenia', master: 'Мастера: Игорь или Евгения, на выбор', sensitive: true },
+    { title: 'Йони-массаж Присутствие', price: '20 000 ₽', time: '2,5 ч', desc: 'Практика для женщины, партнёр рядом, как поддержка и доверие. Он не массирует: он учится держать пространство, чувствовать дыхание и доверять телу партнёрши больше, чем своим догадкам. Это практика доверия, из которой пара выходит с новым языком близости, построенным на уважении.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Йони-массаж Присутствие.', who: 'igor', msg2: 'Здравствуйте, Евгения! Хочу записаться на практику Йони-массаж Присутствие.', who2: 'evgenia', master: 'Мастера: Игорь или Евгения, на выбор', sensitive: true },
+    { title: 'Парный йони-массаж Два поля, одна ценность', price: '23 000 ₽', time: '2,5 ч', desc: 'Практика для одной женщины, которую одновременно ведут два мастера. Ты в центре, а мужская и женская энергия работают для тебя одной цельностью. Это не массаж вдвоём, а гармония двух присутствий: нет страха быть оценённой, нет давления, есть только ты и право чувствовать. Игорь приносит заземление, этику и опору, Евгения женское зеркало, текучесть и принятие.', msg: 'Здравствуйте! Хочу записаться на практику Два поля, одна ценность.', who: 'igor', master: 'Два мастера одновременно: Игорь и Евгения', sensitive: true },
+    { title: 'Практика Сквирт', price: '8 000 ₽', time: '20-30 мин', desc: 'Глубокое расслабление тазового дна, при котором тело отпускает контроль и растворяется в нежной, растекающейся по всему телу волне удовольствия. После, тишина в голове и мягкость во всём теле.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Сквирт.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
+    { title: 'Лингам-массаж', price: '25 000 ₽', time: '90 мин', desc: 'Лингам-массаж, это не секс и не стимуляция ради результата. Это бережная практика, которая снимает хроническое напряжение, восстанавливает чувствительность и возвращает мужчине связь с телом через присутствие. Проводит сертифицированный мастер Евгения Болмасова.', msg: 'Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Болмасова', sensitive: true },
+    { title: 'Тантрический массаж', price: '12 000 ₽', time: '90 мин', desc: 'Искусство медленного присутствия, где удовольствие не цель, а состояние. Практика подходит и мужчинам, и женщинам: снимает глубинное напряжение, пробуждает чувственность и учит слышать своё тело без слов. После сеанса тишина в голове, мягкое тепло и ощущение наполненности.', msg: 'Здравствуйте, Игорь! Хочу записаться на тантрический массаж.', who: 'igor', msg2: 'Здравствуйте, Евгения! Хочу записаться на тантрический массаж.', who2: 'evgenia', master: 'Мастера: Игорь или Евгения, на выбор', sensitive: true },
+    { title: 'Эрогенный массаж', price: '10 000 ₽', time: '60 мин', desc: 'Деликатный диалог с телом, в котором каждое прикосновение пробуждает чувственность и возвращает способность чувствовать удовольствие без контроля и спешки. Подходит и мужчинам, и женщинам: помогает снять зажимы, открыться новым ощущениям и почувствовать себя живым. Проводит Евгения Болмасова.', msg: 'Здравствуйте, хочу записаться к Евгении на эрогенный массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Болмасова', sensitive: true }
   ],
   education: [
-    { title: 'Обучение йони-массажу', price: 'от 40 000 ₽', time: '6-8 ч', desc: 'Интенсивный практический курс. Включает теорию, анатомию и пошаговую отработку техник. Два направления: для профессиональных практиков и для семейных пар.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение технике массажа.', who: 'igor', forever: true },
-    { title: 'Курс массажа йони', price: '50 000 ₽', time: '5 сеансов', desc: 'Полная терапевтическая программа. Постепенное мягкое погружение от базового расслабления до проработки глубоких психосоматических блоков за 5 встреч.', msg: 'Здравствуйте, Игорь! Хочу записаться на полный курс массажа, 5 сеансов.', who: 'igor', forever: true }
+    { title: 'Обучение йони-массажу', price: 'от 40 000 ₽', time: '6-8 ч', desc: 'Курс посвящён йони-массажу как сакральной практике исцеления женской телесности, раскрытия чувствительности и работы с энергетическими блоками. Техники внешней и внутренней работы, дыхательные практики и методы сопровождения женщины в её телесном опыте. Особое внимание психологической безопасности, ритуалу настройки и интеграции опыта. Два пути: для практиков и для пар.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение йони-массажу.', who: 'igor', forever: true },
+    { title: 'Обучение лингам-массажу', price: '40 000 ₽', time: 'интенсив', desc: 'Интенсивный курс по лингам-массажу даёт полное понимание анатомии и психологии мужчины, а также алгоритм безопасного и эффективного воздействия. Программа включает глубокую проработку мышечных зажимов и приёмы стимуляции нервных окончаний. Возможность освоить востребованную профессию, сочетающую заботу о здоровье клиента и искусство чувственного исцеления.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение лингам-массажу.', who: 'igor', forever: true },
+    { title: 'Обучение тантрическому массажу', price: '30 000 ₽', time: 'интенсив', desc: 'Курс обучает тантрическому массажу всего тела без работы с интимными зонами, с фокусом на глубокой релаксации и пробуждении нервных окончаний. Вы освоите плавные вибрационные техники и дыхательные практики, которые снимают зажимы, запускают внутренние энергетические потоки и возвращают целостную чувствительность тела.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение тантрическому массажу.', who: 'igor', forever: true },
+    { title: 'Обучение эрогенному массажу', price: '20 000 ₽', time: 'интенсив', desc: 'Курс обучает эрогенному массажу как мягкой практике проработки телесных зажимов через воздействие на энергоцентры и нервные окончания по всему телу, без интимных зон. Вы освоите плавные, текучие техники, которые высвобождают заблокированную энергию, усиливают чувствительность и восстанавливают естественный поток жизненной силы.', msg: 'Здравствуйте, Игорь! Хочу записаться на обучение эрогенному массажу.', who: 'igor', forever: true }
   ]
 };
 
@@ -2202,6 +2254,25 @@ function openServiceModal(key, i) {
   document.getElementById('modalMeta').textContent = s.price + ' · ' + s.time + (s.master ? ' · ' + s.master : '');
   document.getElementById('modalText').textContent = s.desc;
   currentBook = { msg: s.msg, who: s.who };
+  const bookBox = document.getElementById('modalBook');
+  if (bookBox) {
+    if (s.who2) {
+      bookBox.innerHTML = '';
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex; gap:10px; flex-wrap:wrap;';
+      [[s.msg, s.who, 'Слот к Игорю'], [s.msg2, s.who2, 'Слот к Евгении']].forEach(([m, w, label]) => {
+        const b = document.createElement('button');
+        b.className = 'btn-primary';
+        b.style.cssText = 'flex:1; min-width:150px;';
+        b.textContent = label;
+        b.addEventListener('click', () => { closeServiceModal(); bookTg(m, w); });
+        row.appendChild(b);
+      });
+      bookBox.appendChild(row);
+    } else {
+      bookBox.innerHTML = '<button class="btn-primary" onclick="bookCurrent()">Занять слот</button>';
+    }
+  }
   const steps = STEP_TEMPLATES[key] || STEP_TEMPLATES.practices;
   document.getElementById('modalSteps').innerHTML = steps.map((st, n) => `
     <div class="modal-step">
