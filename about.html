@@ -71,7 +71,7 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 .mobile-nav { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 28px; opacity: 0; pointer-events: none; transition: opacity .3s; }
 .mobile-nav.open { opacity: 1; pointer-events: all; }
 .mobile-nav a { font-size: 24px; font-family: 'Cormorant Garamond', serif; color: var(--bordo); }
-.mobile-nav a.btn-primary { color: var(--cream); }
+.mobile-nav a.btn-primary { color: var(--cream); font-family: 'Manrope', sans-serif; font-size: 16px; }
 .mobile-nav .close-nav { position: absolute; top: 24px; right: 24px; font-size: 32px; color: var(--bordo); }
 
 .hero { position: relative; padding: 84px 0 64px; overflow: hidden; }
@@ -142,6 +142,9 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 .contact-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
 .float-tg { position: fixed; bottom: 24px; left: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(34,158,217,0.45); transition: transform 0.3s; animation: floatpulse 2.6s infinite; }
 .float-tg:hover { transform: scale(1.08); }
+.float-max { position: fixed; bottom: 92px; left: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #6C4BF4; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(108,75,244,0.45); transition: transform 0.3s; }
+.float-max:hover { transform: scale(1.08); }
+.float-max svg { width: 28px; height: 28px; }
 .float-tg svg { width: 28px; height: 28px; }
 @keyframes floatpulse { 0%,100% { box-shadow: 0 6px 24px rgba(34,158,217,0.45); } 50% { box-shadow: 0 6px 34px rgba(34,158,217,0.7); } }
 @media (max-width: 560px) { .contact-tiles { grid-template-columns: 1fr; } }
@@ -434,7 +437,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <a href="index.html">Главная</a>
         <a href="index.html#services">Услуги</a>
         <a href="about.html" class="active">О студии</a>
-        <a href="education.html">Курсы</a>
+        <a href="education.html">Обучение</a>
         <a href="blog.html">Статьи</a>
         <a href="index.html#contact" class="btn-primary">Записаться</a>
       </nav>
@@ -448,7 +451,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
   <a href="index.html">Главная</a>
   <a href="index.html#services">Услуги</a>
   <a href="about.html">О студии</a>
-  <a href="education.html">Курсы</a>
+  <a href="education.html">Обучение</a>
   <a href="blog.html">Статьи</a>
   <a href="index.html#contact" class="btn-primary">Записаться</a>
 </div>
@@ -572,7 +575,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
       <div class="footer-brand">Студия сексологии Игоря Пожидаева</div>
       <div class="footer-links">
         <a href="index.html">Главная</a>
-        <a href="education.html">Курсы</a>
+        <a href="education.html">Обучение</a>
         <a href="https://t.me/About_seks_is_easy" target="_blank" rel="noopener">Telegram</a>
         <a href="privacy.html">Политика конфиденциальности</a>
       </div>
@@ -623,6 +626,7 @@ document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 })();
 </script>
 <a class="float-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg></a>
+<a class="float-max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
 
 <div class="video-modal" id="videoModal" onclick="closeVideoModalBg(event)">
   <div class="vm-box">
