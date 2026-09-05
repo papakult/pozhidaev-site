@@ -106,29 +106,6 @@ body::after {
   .living-bg .pocket { animation: none; }
 }
 
-/* ===== CUSTOM CURSOR (только desktop с точным указателем) ===== */
-@media (hover: hover) and (pointer: fine) {
-  body.custom-cursor, body.custom-cursor a, body.custom-cursor button { cursor: none; }
-  .cursor-dot, .cursor-ring {
-    position: fixed; top: 0; left: 0;
-    z-index: 10000;
-    pointer-events: none;
-    border-radius: 50%;
-    mix-blend-mode: normal;
-  }
-  .cursor-dot { width: 8px; height: 8px; background: #C49A6C; }
-  .cursor-ring {
-    width: 36px; height: 36px;
-    border: 1.5px solid rgba(92,26,27,0.4);
-    background: rgba(92,26,27,0.04);
-    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-  }
-  .cursor-ring.grow {
-    width: 66px; height: 66px;
-    background: rgba(92,26,27,0.12);
-    border-color: rgba(92,26,27,0.5);
-  }
-}
 
 /* ===== CONTAINER ===== */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -194,6 +171,7 @@ body::after {
   letter-spacing: 0.02em;
 }
 .nav a:hover { color: var(--bordo); }
+.nav a.btn-primary, .nav a.btn-primary:hover, .nav a.btn-primary:visited { color: var(--cream); }
 
 .btn-primary {
   display: inline-flex;
@@ -1196,15 +1174,6 @@ svg.tree { fill: var(--gold); display:block; }
 /* warmer, candle-like living background */
 .living-bg .pocket { animation-duration: 30s; }
 .living-bg .p3 { background:#D9A066; }
-/* cursor warm trailing glow */
-@media (hover:hover) and (pointer:fine){
-  .cursor-glow {
-    position:fixed; top:0; left:0; z-index:9998; pointer-events:none;
-    width:150px; height:150px; border-radius:50%;
-    background: radial-gradient(circle, rgba(196,154,108,0.28) 0%, rgba(196,154,108,0.10) 40%, transparent 70%);
-    filter: blur(6px); opacity:0; transition: opacity .4s ease;
-  }
-}
 @media (prefers-reduced-motion: reduce){
   .hero-visual::before, .section-title::before, .arch-frame, .btn-primary { animation: none; }
 }
@@ -2554,48 +2523,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 counterEls.forEach(el => counterObserver.observe(el));
 
-// ===== CUSTOM CURSOR + МАГНИТ (только desktop) =====
-(function() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  document.body.classList.add('custom-cursor');
-  const dot = document.createElement('div'); dot.className = 'cursor-dot';
-  const ring = document.createElement('div'); ring.className = 'cursor-ring';
-  const glow = document.createElement('div'); glow.className = 'cursor-glow';
-  document.body.append(glow, dot, ring);
-  let gx = window.innerWidth/2, gy = window.innerHeight/2;
-
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let rx = mx, ry = my, magnet = null;
-
-  window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  window.addEventListener('mouseout', e => { if (!e.relatedTarget) { dot.style.opacity = '0'; ring.style.opacity = '0'; glow.style.opacity = '0'; } });
-  window.addEventListener('mouseover', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; glow.style.opacity = '1'; });
-
-  const magnets = document.querySelectorAll('.svc-btn-fill, .svc-btn-outline, .btn-primary, .btn-outline, .nav-card, .safety-point, .quiz-submit, .quiz-option, .tab-btn, .play-btn');
-  magnets.forEach(el => {
-    el.addEventListener('mouseenter', () => { ring.classList.add('grow'); magnet = el; });
-    el.addEventListener('mouseleave', () => { ring.classList.remove('grow'); magnet = null; });
-  });
-
-  function loop() {
-    let tx = mx, ty = my;
-    if (magnet && document.body.contains(magnet)) {
-      const r = magnet.getBoundingClientRect();
-      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      tx = mx + (cx - mx) * 0.35;
-      ty = my + (cy - my) * 0.35;
-    }
-    rx += (tx - rx) * 0.18;
-    ry += (ty - ry) * 0.18;
-    gx += (mx - gx) * 0.08;
-    gy += (my - gy) * 0.08;
-    glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
-    dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
-    requestAnimationFrame(loop);
-  }
-  loop();
-})();
 </script>
 
 </body>

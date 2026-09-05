@@ -57,13 +57,6 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 @media (max-width:768px){ .living-bg .pocket{ filter: blur(60px); opacity:0.3; } }
 @media (prefers-reduced-motion: reduce){ .living-bg .pocket{ animation:none; } }
 
-@media (hover:hover) and (pointer:fine){
-  body.custom-cursor, body.custom-cursor a, body.custom-cursor button { cursor: none; }
-  .cursor-dot,.cursor-ring{ position:fixed; top:0; left:0; z-index:10000; pointer-events:none; border-radius:50%; }
-  .cursor-dot{ width:8px; height:8px; background:var(--gold); }
-  .cursor-ring{ width:36px; height:36px; border:1.5px solid rgba(92,26,27,0.4); background:rgba(92,26,27,0.05); transition:width .25s,height .25s,background .25s,border-color .25s; }
-  .cursor-ring.grow{ width:66px; height:66px; background:rgba(92,26,27,0.12); border-color:rgba(92,26,27,0.5); }
-}
 
 .header { position: sticky; top: 0; z-index: 100; background: rgba(253,248,240,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(92,26,27,0.06); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
@@ -74,6 +67,7 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { font-size: 14px; font-weight: 500; color: var(--text-light); transition: color .3s; }
 .nav a:hover, .nav a.active { color: var(--bordo); }
+.nav a.btn-primary, .nav a.btn-primary:hover, .nav a.btn-primary:visited { color: var(--cream); }
 .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 28px; background: var(--bordo); color: var(--cream); font-size: 14px; font-weight: 500; border-radius: 100px; transition: background .3s, transform .2s; }
 .btn-primary:hover { background: var(--bordo-light); transform: translateY(-1px); }
 .header .btn-primary { min-height: 0; }
@@ -208,7 +202,6 @@ svg.tree{fill:var(--gold);display:block;}
 .tree-wm-footer{width:340px;height:340px;right:8px;bottom:-40px;}
 .sprig-accent{position:absolute;color:var(--gold);pointer-events:none;z-index:0;opacity:.14;}
 .sprig-fL{width:130px;height:130px;left:1%;bottom:8%;transform:rotate(-150deg);}
-.cursor-glow{position:fixed;top:0;left:0;z-index:9998;pointer-events:none;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle, rgba(196,154,108,0.28) 0%, rgba(196,154,108,0.10) 40%, transparent 70%);filter:blur(6px);opacity:0;transition:opacity .4s ease;}
 @media (max-width:768px){.tree-wm-footer{width:220px;height:220px;}.sprig-accent{display:none;}}
 @media (prefers-reduced-motion: reduce){.section-title::before,.btn-primary{animation:none;}}
 
@@ -612,31 +605,6 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeVideoModal()
 const revealObserver = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 (function watchGrowTrees(){var pending=document.querySelectorAll('.tree-grow:not(.visible)');if(!pending.length)return;var vh=window.innerHeight;pending.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.88&&r.bottom>40)el.classList.add('visible');});requestAnimationFrame(watchGrowTrees);})();
-(function(){
-  if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  document.body.classList.add('custom-cursor');
-  const dot=document.createElement('div'); dot.className='cursor-dot';
-  const ring=document.createElement('div'); ring.className='cursor-ring';
-  const glow=document.createElement('div'); glow.className='cursor-glow';
-  document.body.append(glow,dot,ring);
-  let gx=innerWidth/2, gy=innerHeight/2;
-  let mx=innerWidth/2, my=innerHeight/2, rx=mx, ry=my, magnet=null;
-  addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; glow.style.opacity='1'; });
-  document.querySelectorAll('.btn-primary,.btn-outline,.method-card,.person-badge').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{ ring.classList.add('grow'); magnet=el; });
-    el.addEventListener('mouseleave',()=>{ ring.classList.remove('grow'); magnet=null; });
-  });
-  (function loop(){
-    let tx=mx, ty=my;
-    if(magnet && document.body.contains(magnet)){ const r=magnet.getBoundingClientRect(); tx=mx+(r.left+r.width/2-mx)*0.3; ty=my+(r.top+r.height/2-my)*0.3; }
-    rx+=(tx-rx)*0.18; ry+=(ty-ry)*0.18;
-    gx+=(mx-gx)*0.08; gy+=(my-gy)*0.08;
-    glow.style.transform=`translate(${gx}px,${gy}px) translate(-50%,-50%)`;
-    dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;
-    ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;
-    requestAnimationFrame(loop);
-  })();
-})();
 </script>
 <a class="float-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg></a>
 <a class="float-max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
