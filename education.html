@@ -172,12 +172,19 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 .tile-max { background: #6C47F5; }
 .tile-phone { background: var(--bordo); }
 .contact-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
-.float-tg { position: fixed; bottom: 24px; left: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(34,158,217,0.45); transition: transform 0.3s; animation: floatpulse 2.6s infinite; }
+.float-tg { position: fixed; bottom: 88px; right: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(34,158,217,0.45); transition: transform 0.3s; animation: floatpulse 2.6s infinite; }
 .float-tg:hover { transform: scale(1.08); }
-.float-max { position: fixed; bottom: 92px; left: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #6C4BF4; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(108,75,244,0.45); transition: transform 0.3s; }
+.float-max { position: fixed; bottom: 156px; right: 24px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #6C4BF4; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(108,75,244,0.45); transition: transform 0.3s; }
 .float-max:hover { transform: scale(1.08); }
 .float-max svg { width: 28px; height: 28px; }
 .float-tg svg { width: 28px; height: 28px; }
+@media (max-width: 480px) {
+  .float-tg, .float-max { width: 48px; height: 48px; right: 16px; }
+  .float-tg svg, .float-max svg { width: 24px; height: 24px; }
+  .float-tg { bottom: 78px; }
+  .float-max { bottom: 134px; }
+}
+
 @keyframes floatpulse { 0%,100% { box-shadow: 0 6px 24px rgba(34,158,217,0.45); } 50% { box-shadow: 0 6px 34px rgba(34,158,217,0.7); } }
 @media (max-width: 560px) { .contact-tiles { grid-template-columns: 1fr; } }
 
