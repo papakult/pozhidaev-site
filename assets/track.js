@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  var CID = 112201052; // счётчик Яндекс.Метрики pozhidaev-sexolog.ru
+  // Счётчик Яндекс.Метрики, аккаунт studio.pozhidaev, сайт pozhidaev-sexolog.ru
+  var CID = 112306161;
 
   (function (m, e, t, r, i, k, a) {
     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
@@ -22,7 +23,6 @@
     accurateTrackBounce: true
   });
 
-  // noscript-пиксель: считает посетителей с отключённым JS
   document.addEventListener('DOMContentLoaded', function () {
     var ns = document.createElement('noscript');
     ns.innerHTML = '<div><img src="https://mc.yandex.ru/watch/' + CID +
@@ -30,33 +30,20 @@
     document.body.insertBefore(ns, document.body.firstChild);
   });
 
-  // ===== Цели =====
   function goal(name) { try { ym(CID, 'reachGoal', name); } catch (e) {} }
-
-  function lead(goalName) {
-    goal(goalName);
-    goal('lead_any');
-  }
+  function lead(goalName) { goal(goalName); goal('lead_any'); }
 
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest ? ev.target.closest('a') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '';
-
-    if (href.indexOf('tel:') === 0) {
-      lead('phone_click');
-    } else if (/(^|\/\/)(t|telegram)\.me\//i.test(href)) {
-      lead('tg_click');
-    } else if (href.indexOf('max.ru') > -1) {
-      lead('max_click');
-    } else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) {
-      lead('wa_click');
-    } else if (href.indexOf('mailto:') === 0) {
-      lead('mail_click');
-    }
+    if (href.indexOf('tel:') === 0) { lead('phone_click'); }
+    else if (/(^|\/\/)(t|telegram)\.me\//i.test(href)) { lead('tg_click'); }
+    else if (href.indexOf('max.ru') > -1) { lead('max_click'); }
+    else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) { lead('wa_click'); }
+    else if (href.indexOf('mailto:') === 0) { lead('mail_click'); }
   }, true);
 
-  // Доскроллил до услуг/цен — глубина интереса
   document.addEventListener('DOMContentLoaded', function () {
     var sec = document.getElementById('services') || document.getElementById('prices');
     if (sec && 'IntersectionObserver' in window) {
