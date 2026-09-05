@@ -31,19 +31,47 @@
   });
 
   function goal(name) { try { ym(CID, 'reachGoal', name); } catch (e) {} }
-  function lead(goalName) { goal(goalName); goal('lead_any'); }
 
+  // чтобы одно действие не засчиталось дважды: и по клику, и по window.open
+  var lastName = '', lastTime = 0;
+  function lead(name) {
+    if (!name) return;
+    var now = Date.now();
+    if (name === lastName && now - lastTime < 1500) return;
+    lastName = name; lastTime = now;
+    goal(name);
+    goal('lead_any');
+  }
+
+  // определяем канал по адресу
+  function classify(url) {
+    if (!url) return null;
+    if (url.indexOf('tel:') === 0) return 'phone_click';
+    if (url.indexOf('mailto:') === 0) return 'mail_click';
+    if (/(^|\/\/|\.)(t|telegram)\.me\//i.test(url)) return 'tg_click';
+    if (url.indexOf('max.ru') > -1) return 'max_click';
+    if (url.indexOf('wa.me') > -1 || url.indexOf('whatsapp') > -1) return 'wa_click';
+    return null;
+  }
+
+  // 1. обычные ссылки
   document.addEventListener('click', function (ev) {
-    var a = ev.target.closest ? ev.target.closest('a') : null;
+    var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
     if (!a) return;
-    var href = a.getAttribute('href') || '';
-    if (href.indexOf('tel:') === 0) { lead('phone_click'); }
-    else if (/(^|\/\/)(t|telegram)\.me\//i.test(href)) { lead('tg_click'); }
-    else if (href.indexOf('max.ru') > -1) { lead('max_click'); }
-    else if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) { lead('wa_click'); }
-    else if (href.indexOf('mailto:') === 0) { lead('mail_click'); }
+    lead(classify(a.getAttribute('href') || ''));
   }, true);
 
+  // 2. кнопки сайта, они открывают мессенджер через window.open,
+  //    а в href у них решётка либо это вообще не ссылка
+  try {
+    var nativeOpen = window.open;
+    window.open = function (url) {
+      lead(classify(typeof url === 'string' ? url : ''));
+      return nativeOpen.apply(window, arguments);
+    };
+  } catch (e) {}
+
+  // 3. долистал до блока услуг
   document.addEventListener('DOMContentLoaded', function () {
     var sec = document.getElementById('services') || document.getElementById('prices');
     if (sec && 'IntersectionObserver' in window) {
