@@ -1,0 +1,1 @@
+$(cat /tmp/favicon_ico_as_latin1.txt)
