@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  // Счётчик Яндекс.Метрики, аккаунт studio.pozhidaev, сайт pozhidaev-sexolog.ru
-  var CID = 112306161;
+  // Счётчик Яндекс.Метрики, аккаунт pozhidaev.sexolog, сайт pozhidaev-sexolog.ru
+  var CID = 112201052;
 
   (function (m, e, t, r, i, k, a) {
     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
