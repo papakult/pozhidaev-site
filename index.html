@@ -1191,6 +1191,26 @@ svg.tree { fill: var(--gold); display:block; }
 /* ===== UNIFIED WARM PHOTO GRADE ===== */
 .studio-gallery img,.safety-visual img,.about-photo img{filter:saturate(1.05) contrast(1.03) brightness(1.01) sepia(0.05);}
 @media (prefers-reduced-motion: reduce){.preloader-tree{animation:none;fill:var(--gold);stroke:none;}.closing-tree-svg{animation:none;}}
+
+/* два кабинета, раздельные фото */
+.safety-visual-pair { display: grid; gap: 18px; }
+.safety-shot { margin: 0; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg,#E8DDD0,#D8CCBC); position: relative; box-shadow: 0 10px 34px var(--shadow); }
+.safety-shot img { display: block; width: 100%; height: auto; }
+.safety-shot.tall img { aspect-ratio: 4/3; object-fit: cover; }
+.safety-shot figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 14px; font-size: 14px; color: #fff; background: linear-gradient(to top, rgba(40,24,20,0.72), rgba(40,24,20,0)); }
+.tab-visual { position: relative; border-radius: 22px; overflow: hidden; margin-bottom: 26px; box-shadow: 0 10px 34px var(--shadow); }
+.tab-visual img { display: block; width: 100%; height: auto; }
+.tab-visual.crop img { aspect-ratio: 21/9; object-fit: cover; }
+.tab-visual span { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 22px 16px; font-size: 14px; color: #fff; background: linear-gradient(to top, rgba(40,24,20,0.7), rgba(40,24,20,0)); }
+
+/* дипломы, компактный блок */
+.docs-mini { margin-top: 26px; }
+.docs-mini-title { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
+.docs-mini-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+.docs-mini-row a { display: block; width: 132px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(92,26,27,0.1); box-shadow: 0 6px 18px var(--shadow); transition: transform .25s; }
+.docs-mini-row a:hover { transform: translateY(-3px); }
+.docs-mini-row img { display: block; width: 100%; height: auto; }
+.docs-mini p { font-size: 13.5px; color: var(--text-light); margin-top: 12px; line-height: 1.6; }
 </style>
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABNmlDQ1BJQ0MgUHJvZmlsZQAAeJx9kL9Lw1AUhT9LQdQuoqKDQ8YualuxP7AOtmrRsVWobmkaitjWkEZ07+of4ewmuIjQ2cVJcBJxcRcE13jSDClIvZeb+73zDnnvPogtoYinoNP13GqlZNSPT4zJDyaUwzCtnsP4kOvnNfS+rPzjGxdTTbtnqX+pPFeH65dN8Xwr5KuAGyFfB3zpOZ74JmD3sFoW34uTrRFujLDluIH/TVzstC+s6N4k7O5RTb2uWqbCubJFG5s1apxxiilKsUuBPOvq28oNVZqMlAJZrVKUKZHTN8eelLz20uwMWY7gPcMj+++wNfB9/zHSDgZwl4Xph0hLbsJsAp6eIy16Y8d0zaEUV8XsEnwvaJRbmPuEmb7UxWB7zKzGn1kN9ulisSrKaJo02V8MlE3aTs3gFwAAAEhQTFRFAQABaEpFbVhUVzY4WDc3aktGVCov//7rkXNgqo1yrZB09eKtzrGK58yckHJgX0I+YkE9dG4blXRrza6HVzhEp5t2/wAAzbKIKOJHWQAAABh0Uk5TAGAbX5eQIg2Xl2QoXU9iXY8FFZEfEQEh1+BaSgAAAc9JREFUeNqVU1my4zAIZBPavTu5/00H5LzELzM/47JcCBDdtDDA/zxEK5I//whZsCMGRbQX+0bfcSBOqBJxjotiQjqA7vE4MTAT7igtEEqkqcLjk6Elcy9CEIjCcUjpnLLGD36w6qFILYzIpUpKouZ8o2hppSoLZieZJmGorRW+opHKjpTqXJulTNMs3CLWjLiXIw4ALEFENbVYJBeZYk+qYpjoIATW/TaxzIGnDuarmQMKT0VHgjEkmjJhYEOAZQEL8oKUJ+vIWZ4qpp4ixZYFFwYxrG02F4lulnCk7HWfDLEikgld445nNeicDoCNngmZTanALoilAIc555k5Pcl7QO2RhYO1gqMESwjmiN1YDpKYAjRUAF4IaREx6exWQkITEyK3DNxTrqBOQJAJNObUEWxtEG0KsO5Un1YMrRx52bPr3jHYzgaF7fDr1nCQ+LmjmHlY3J5D8ivDCgzv46SzeTHjc5sLb+I2SaMJwJ8hdfMOsW7vs4/fCfrXtF9nCOYr4T3oL2sdUL4VTxC6NvRh8zIjBk8IuN6cFwP3+4qmrVsz0Wzx9c7DNTKdwT9DL7j/F85oCYZAvuzOF/puZXWa5wtpUPz+ffXq9+f7hv8DricOECEIf5cAAAAASUVORK5CYII=">
 <link rel="canonical" href="https://pozhidaev-sexolog.ru/">
@@ -1539,6 +1559,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 
     <!-- Tab 1: Consultations -->
     <div class="tab-content active" id="tab-consultations">
+      <div class="tab-visual"><img src="office-room.jpg" alt="Кабинет для консультаций" loading="lazy" decoding="async" width="1400" height="473"><span>Разговорные сессии проходят в кабинете, два кресла и мягкий свет</span></div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span></div>
@@ -1597,6 +1618,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 
     <!-- Tab 2: Practices -->
     <div class="tab-content" id="tab-practices">
+      <div class="tab-visual crop"><img src="studio-room.jpg" alt="Студия для телесных практик" loading="lazy" decoding="async" width="825" height="1100"><span>Телесные практики проходят в отдельной студии, маты, тёплый свет, аромамасла</span></div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
@@ -1801,8 +1823,15 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
     <h2 class="section-title reveal">Безопасность и комфорт</h2>
     <p class="section-sub reveal">Каждая деталь пространства создана для вашего спокойствия</p>
     <div class="safety-grid">
-      <div class="safety-visual reveal">
-        <img src="studio-room.jpg" alt="Кабинет студии при свечах" loading="lazy" decoding="async" width="825" height="1100">
+      <div class="safety-visual-pair reveal">
+        <figure class="safety-shot">
+          <img src="office-room.jpg" alt="Кабинет для консультаций, два кресла и мягкий свет" loading="lazy" decoding="async" width="1400" height="473">
+          <figcaption>Кабинет для консультаций</figcaption>
+        </figure>
+        <figure class="safety-shot tall">
+          <img src="studio-room.jpg" alt="Студия для телесных практик при свечах" loading="lazy" decoding="async" width="825" height="1100">
+          <figcaption>Студия для телесных практик</figcaption>
+        </figure>
       </div>
       <div class="safety-points">
         <div class="safety-point reveal">
@@ -1862,6 +1891,14 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
               <div class="counter-num" data-target="4" data-suffix="">4</div>
               <div class="counter-label">города</div>
             </div>
+          </div>
+          <div class="docs-mini">
+            <div class="docs-mini-title">Образование</div>
+            <div class="docs-mini-row">
+              <a href="about.html#docs" title="Диплом о профессиональной переподготовке, Talentsy"><img src="diplom-talentsy.jpg" alt="Диплом о профессиональной переподготовке, Talentsy" loading="lazy" decoding="async" width="1100" height="771"></a>
+              <a href="about.html#docs" title="Mini MBA, Sexual Relationship Consultant"><img src="diplom-mba.jpg" alt="Диплом Mini MBA, Sexual Relationship Consultant" loading="lazy" decoding="async" width="1100" height="804"></a>
+            </div>
+            <p>Профессиональная переподготовка по психологическому консультированию в сфере сексуальных отношений, Talentsy, Москва. <a href="about.html#docs" style="color:var(--gold);">Посмотреть документы</a></p>
           </div>
         </div>
       </div>
