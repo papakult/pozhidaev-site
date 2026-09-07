@@ -1197,13 +1197,11 @@ svg.tree { fill: var(--gold); display:block; }
 /* два кабинета, раздельные фото */
 .safety-visual-pair { display: grid; gap: 18px; }
 .safety-shot { margin: 0; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg,#E8DDD0,#D8CCBC); position: relative; box-shadow: 0 10px 34px var(--shadow); }
-.safety-shot img { display: block; width: 100%; height: auto; }
-.safety-shot.tall img { aspect-ratio: 4/3; object-fit: cover; }
+.safety-shot img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .safety-shot figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 14px; font-size: 14px; color: #fff; background: linear-gradient(to top, rgba(40,24,20,0.72), rgba(40,24,20,0)); }
 .tab-visual { position: relative; border-radius: 22px; overflow: hidden; margin-bottom: 26px; box-shadow: 0 10px 34px var(--shadow); }
-.tab-visual img { display: block; width: 100%; height: auto; max-height: 300px; object-fit: cover; }
-@media (max-width: 768px) { .tab-visual img { max-height: 190px; } }
-.tab-visual.crop img { aspect-ratio: 21/9; object-fit: cover; }
+.tab-visual img { display: block; width: 100%; aspect-ratio: 21/9; object-fit: cover; max-height: 300px; }
+@media (max-width: 768px) { .tab-visual img { aspect-ratio: 16/9; max-height: 190px; } }
 .tab-visual span { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 22px 16px; font-size: 14px; color: #fff; background: linear-gradient(to top, rgba(40,24,20,0.7), rgba(40,24,20,0)); }
 
 /* дипломы, компактный блок */
@@ -1494,7 +1492,8 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
       </div>
       <svg class="sprig-accent sprig-h1" aria-hidden="true"><use href="#sprig"/></svg><svg class="sprig-accent sprig-h2" aria-hidden="true"><use href="#sprig"/></svg><div class="hero-visual">
         <div class="arch-frame" onclick="openVideoModal()">
-          <video class="arch-video" src="hero-arch.mp4?v=4" autoplay muted loop playsinline preload="metadata"></video>
+          <video class="arch-video" src="hero-arch.mp4?v=4" data-hd="hero-arch-hd.mp4?v=1" autoplay muted loop playsinline preload="metadata"></video>
+          <script>(function(){try{var v=document.currentScript.previousElementSibling;if(v&&v.dataset.hd&&window.matchMedia("(min-width: 900px)").matches){v.src=v.dataset.hd;v.load();}}catch(e){}})();</script>
         </div>
         <button class="play-btn" onclick="openVideoModal()" title="Смотреть со звуком" aria-label="Смотреть видео со звуком">
           <span class="play-ico"><svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg></span>
@@ -1562,7 +1561,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 
     <!-- Tab 1: Consultations -->
     <div class="tab-content active" id="tab-consultations">
-      <div class="tab-visual"><img src="office-room.jpg" alt="Кабинет для консультаций" loading="lazy" decoding="async" width="1400" height="473"><span>Разговорные сессии проходят в кабинете, два кресла и мягкий свет</span></div>
+      <div class="tab-visual"><img src="office-room.jpg" alt="Кабинет для консультаций" loading="lazy" decoding="async" width="1400" height="1050"><span>Разговорные сессии проходят в кабинете, два кресла и мягкий свет</span></div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-consultation">Консультация</span><span class="service-tag tag-online">Очно или онлайн</span></div>
@@ -1621,7 +1620,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 
     <!-- Tab 2: Practices -->
     <div class="tab-content" id="tab-practices">
-      <div class="tab-visual crop"><img src="studio-room.jpg" alt="Студия для телесных практик" loading="lazy" decoding="async" width="825" height="1100"><span>Телесные практики проходят в отдельной студии, маты, тёплый свет, аромамасла</span></div>
+      <div class="tab-visual"><img src="studio-room.jpg" alt="Студия для телесных практик" loading="lazy" decoding="async" width="825" height="1100"><span>Телесные практики проходят в отдельной студии, маты, тёплый свет, аромамасла</span></div>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
@@ -1828,10 +1827,10 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
     <div class="safety-grid">
       <div class="safety-visual-pair reveal">
         <figure class="safety-shot">
-          <img src="office-room.jpg" alt="Кабинет для консультаций, два кресла и мягкий свет" loading="lazy" decoding="async" width="1400" height="473">
+          <img src="office-room.jpg" alt="Кабинет для консультаций, два кресла и мягкий свет" loading="lazy" decoding="async" width="1400" height="1050">
           <figcaption>Кабинет для консультаций</figcaption>
         </figure>
-        <figure class="safety-shot tall">
+        <figure class="safety-shot">
           <img src="studio-room.jpg" alt="Студия для телесных практик при свечах" loading="lazy" decoding="async" width="825" height="1100">
           <figcaption>Студия для телесных практик</figcaption>
         </figure>
@@ -2034,6 +2033,11 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">Всю жизнь в самый важный момент я будто вылетала из тела и начинала всё контролировать вместо того, чтобы чувствовать. Психологи не могли пробить этот панцирь, а здесь я впервые позволила себе просто быть. После массажа перестала зажиматься и научилась доверять. Отличная перезагрузка.</p>
         <div class="review-author">Клиентка <span class="review-date">· 30.03.2026</span></div>
+      </div>
+      <div class="review-card" data-cat="edu">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Долго думала об обучении, смущало всё: как я буду прикасаться к женщинам, как вообще освою новую для себя профессию. Результат оказался невероятным. Я поняла женское тело и, кажется, влюбилась в сам процесс. Пришло осознание, что мы все сёстры, произошло какое-то воссоединение с женщинами. Игорь объясняет доходчиво, раскладывает всё по полочкам, и сразу идёт отработка техники. Запомнила не всё, но руки будто двигаются сами. Методичка очень помогает, перечитываю перед каждым массажем.</p>
+        <div class="review-author">Евгения, 37 лет, после обучения</div>
       </div>
       <div class="review-card extra" data-cat="edu">
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
