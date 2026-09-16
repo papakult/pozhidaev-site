@@ -82,3 +82,24 @@
     }
   });
 })();
+
+/* Telegram Игоря переименован 13.09.2026: PRO_cekc -> Pozhidaev_igor, About_seks_is_easy -> Pozhidaev_sexolog.
+   Страницы index/about/education ещё несут старый юзернейм в inline-скрипте, поэтому правим здесь:
+   перебиваем bookTg и переписываем href у старых ссылок. Убрать после обновления самих страниц. */
+(function () {
+  'use strict';
+  var OLD_IGOR = /t\.me\/PRO_cekc/g, OLD_CHAN = /t\.me\/About_seks_is_easy/g;
+  var IGOR = 'https://t.me/Pozhidaev_igor', EVG = 'https://t.me/BOLMBOM';
+  window.bookTg = function (msg, who) {
+    var base = (who === 'evgenia') ? EVG : IGOR;
+    window.open(base + '?text=' + encodeURIComponent(msg || ''), '_blank');
+  };
+  function fixLinks() {
+    var links = document.querySelectorAll('a[href*="t.me/PRO_cekc"], a[href*="t.me/About_seks_is_easy"]');
+    for (var i = 0; i < links.length; i++) {
+      var h = links[i].getAttribute('href');
+      links[i].setAttribute('href', h.replace(OLD_IGOR, 't.me/Pozhidaev_igor').replace(OLD_CHAN, 't.me/Pozhidaev_sexolog'));
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixLinks); else fixLinks();
+})();
