@@ -82,20 +82,3 @@
     }
   });
 })();
-
-/* Фото Евгении заменено 14.09.2026 под тем же именем evgenia.jpg, у старых посетителей браузер держит
-   прежнюю картинку в кэше. Добавляем версию к адресу, чтобы браузер запросил файл заново.
-   Можно убрать, когда в index.html и about.html пропишут evgenia.jpg?v=2 напрямую. */
-(function () {
-  'use strict';
-  var V = '?v=2';
-  function bust() {
-    var els = document.querySelectorAll('img[src$="evgenia.jpg"], video[poster$="evgenia.jpg"]');
-    for (var i = 0; i < els.length; i++) {
-      var el = els[i];
-      if (el.tagName === 'IMG') el.setAttribute('src', el.getAttribute('src') + V);
-      else el.setAttribute('poster', el.getAttribute('poster') + V);
-    }
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bust); else bust();
-})();
