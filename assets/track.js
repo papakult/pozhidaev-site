@@ -83,23 +83,19 @@
   });
 })();
 
-/* Telegram Игоря переименован 13.09.2026: PRO_cekc -> Pozhidaev_igor, About_seks_is_easy -> Pozhidaev_sexolog.
-   Страницы index/about/education ещё несут старый юзернейм в inline-скрипте, поэтому правим здесь:
-   перебиваем bookTg и переписываем href у старых ссылок. Убрать после обновления самих страниц. */
+/* Фото Евгении заменено 14.09.2026 под тем же именем evgenia.jpg, у старых посетителей браузер держит
+   прежнюю картинку в кэше. Добавляем версию к адресу, чтобы браузер запросил файл заново.
+   Можно убрать, когда в index.html и about.html пропишут evgenia.jpg?v=2 напрямую. */
 (function () {
   'use strict';
-  var OLD_IGOR = /t\.me\/PRO_cekc/g, OLD_CHAN = /t\.me\/About_seks_is_easy/g;
-  var IGOR = 'https://t.me/Pozhidaev_igor', EVG = 'https://t.me/BOLMBOM';
-  window.bookTg = function (msg, who) {
-    var base = (who === 'evgenia') ? EVG : IGOR;
-    window.open(base + '?text=' + encodeURIComponent(msg || ''), '_blank');
-  };
-  function fixLinks() {
-    var links = document.querySelectorAll('a[href*="t.me/PRO_cekc"], a[href*="t.me/About_seks_is_easy"]');
-    for (var i = 0; i < links.length; i++) {
-      var h = links[i].getAttribute('href');
-      links[i].setAttribute('href', h.replace(OLD_IGOR, 't.me/Pozhidaev_igor').replace(OLD_CHAN, 't.me/Pozhidaev_sexolog'));
+  var V = '?v=2';
+  function bust() {
+    var els = document.querySelectorAll('img[src$="evgenia.jpg"], video[poster$="evgenia.jpg"]');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.tagName === 'IMG') el.setAttribute('src', el.getAttribute('src') + V);
+      else el.setAttribute('poster', el.getAttribute('poster') + V);
     }
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixLinks); else fixLinks();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bust); else bust();
 })();
