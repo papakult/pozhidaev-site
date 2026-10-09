@@ -1,33 +1,32 @@
-/* Reserve a mobile side lane so floating shortcuts never cover page copy. */
-.quick-actions { display: contents; }
-@media (max-width: 768px) {
-  body { padding-right: 68px; }
-  .quick-actions {
-    position: fixed;
-    right: 8px;
-    bottom: max(16px, env(safe-area-inset-bottom));
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 48px;
-  }
-  .quick-actions .float-tg,
-  .quick-actions .float-max,
-  .quick-actions .safe-mode-btn {
-    position: static;
-    flex: 0 0 48px;
-    width: 48px;
-    min-height: 48px;
-    height: 48px;
-    padding: 0;
-    justify-content: center;
-    border-radius: 50%;
-    animation: none;
-    transform: none;
-    font-size: 13px;
-    text-decoration: none;
-  }
-  .quick-actions .safe-mode-btn .sm-label-off,
-  .quick-actions .safe-mode-btn .sm-label-on { display: none; }
+/* Existing shortcuts are placed in the sticky header. */
+.header .quick-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px 10px;
 }
+.header .quick-actions .float-tg,
+.header .quick-actions .float-max,
+.header .quick-actions .safe-mode-btn {
+  position: static;
+  flex: 0 0 auto;
+  width: auto;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 14px;
+  gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  animation: none;
+  transform: none;
+  box-shadow: none;
+  font-size: 13px;
+  text-decoration: none;
+}
+.header .quick-actions a::after { content: attr(data-label); }
+.header .quick-actions svg { width: 22px; height: 22px; }
+.header .quick-actions .safe-mode-btn { width: 44px; padding: 0; }
+.header .quick-actions .safe-mode-btn span { display: none; }
