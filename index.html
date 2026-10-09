@@ -1095,7 +1095,7 @@ body.safe-mode .sensitive:hover { filter: blur(0); }
     margin: 0 auto;
     text-align: left;
   }
-  .value-card { width: 100%; padding: 32px 72px 32px 24px; }
+  .value-card { width: 100%; padding: 32px 24px; }
   .value-card p { text-align: justify; text-justify: inter-word; hyphens: auto; }
 }
 
@@ -1230,6 +1230,7 @@ svg.tree { fill: var(--gold); display:block; }
 <script type="application/ld+json">
 {"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Нужно ли раздеваться на консультациях?","acceptedAnswer": {"@type": "Answer","text": "Нет, консультация начинается как разговор. К телесным практикам переходим только по запросу и после обсуждения."}},{"@type": "Question","name": "Можно прийти с партнёром?","acceptedAnswer": {"@type": "Answer","text": "Да, есть парные консультации и практики."}},{"@type": "Question","name": "Как записаться?","acceptedAnswer": {"@type": "Answer","text": "Нажимайте Telegram, WhatsApp, Max или звонок. Игорь подтверждает удобное время, первые 15 минут бесплатны."}},{"@type": "Question","name": "Принимаете в Адлере?","acceptedAnswer": {"@type": "Answer","text": "Да, кабинет находится в Сочи, это удобно добираться и из Адлера. Точный адрес присылаем после записи."}},{"@type": "Question","name": "Можно ли консультацию онлайн?","acceptedAnswer": {"@type": "Answer","text": "Да, все разговорные консультации, индивидуальные и парные, можно провести онлайн из любого города. Формат и порядок работы те же, что и очно."}},{"@type": "Question","name": "Это безопасно?","acceptedAnswer": {"@type": "Answer","text": "Да, основа — границы, согласие и ваше право остановить процесс в любой момент."}}]}
 </script>
+<link rel="stylesheet" href="/assets/contact-controls.css?v=1">
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><svg class="preloader-tree" viewBox="0 0 255 256"><use href="#tree"/></svg></div>
@@ -1709,14 +1710,14 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
           <div class="service-tags-row"><span class="service-tag tag-practice">Практика</span></div>
           <h4 class="sensitive">Тантрический массаж</h4>
           <p class="service-desc sensitive">Массаж всего тела в самом медленном темпе из всех, что я делаю. Никуда не торопимся: чувствуем, как отзывается тело, и двигаемся за ним. Снимает глубокое напряжение, которое не берёт обычный спа-массаж, и возвращает чувствительность телу, которое давно живёт «на автопилоте». К концу сеанса многие не хотят вставать с кушетки — и это лучшая оценка. Подходит и мужчинам, и женщинам.</p>
-          <p class="service-master">Мастера: Игорь или Евгения, на выбор</p>
+          <p class="service-master">Женщинам: Игорь или Евгения. Мужчинам: Евгения.</p>
           <div class="service-meta">
             <span class="service-price">12 000 ₽</span>
             <span class="service-time">90 мин</span>
           </div>
           <div class="service-buttons">
             <button class="svc-btn-outline" onclick="openServiceModal('practices', 5)">Что входит?</button>
-            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на тантрический массаж.','igor')">К Игорю</button>
+            <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на тантрический массаж.','igor')">Женщинам к Игорю</button>
             <button class="svc-btn-fill" onclick="bookTg('Здравствуйте, Евгения! Хочу записаться на тантрический массаж.','evgenia')">К Евгении</button>
           </div>
         </div>
@@ -2213,10 +2214,11 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
 </footer>
 
 <!-- FLOATING TELEGRAM -->
-<a class="float-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram">
+<div class="quick-actions" role="group" aria-label="Быстрая связь">
+<a class="float-tg" data-label="Telegram" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg>
 </a>
-<a class="float-max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
+<a class="float-max" data-label="Max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
 
 <!-- SAFE MODE BUTTON (Фишка 6) -->
 <button class="safe-mode-btn" onclick="toggleSafeMode()" title="Безопасный режим">
@@ -2224,6 +2226,7 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
   <span class="sm-label-off">Приватность</span>
   <span class="sm-label-on">Режим включён</span>
 </button>
+</div>
 
 <!-- SERVICE POPUP (Фишка 3) -->
 <div class="modal-overlay" id="serviceModal" onclick="closeServiceModalOnBg(event)">
@@ -2271,7 +2274,7 @@ const SERVICES = {
     { title: 'Парный йони-массаж', price: '23 000 ₽', time: '2,5 ч', desc: 'Практика для одной женщины, которую одновременно ведут два мастера — я и Евгения. Четыре руки, два темпа, два качества внимания: одни успокаивают, другие пробуждают чувствительность. Вам не нужно ничего объяснять и ничего доказывать — можно просто чувствовать. Многие называют это самым глубоким расслаблением в их жизни.', msg: 'Здравствуйте! Хочу записаться на парный йони-массаж.', who: 'igor', master: 'Два мастера одновременно: Игорь и Евгения', sensitive: true },
     { title: 'Практика Сквирт', price: '8 000 ₽', time: '20-30 мин', desc: 'Работа с тазовым дном: снимаем напряжение, которое годами мешает телу отпускать контроль. Многие женщины живут в этом напряжении так давно, что считают его нормой. Здесь тело учится расслабляться по-настоящему — впервые за долгое время. После: тишина в голове, мягкость во всём теле, сон как у ребёнка. Провожу только после знакомства — сначала бесплатные 15 минут.', msg: 'Здравствуйте, Игорь! Хочу записаться на практику Сквирт.', who: 'igor', master: 'Мастер: Игорь Пожидаев', sensitive: true },
     { title: 'Лингам-массаж', price: '25 000 ₽', time: '90 мин', desc: '90 минут бережной работы с мужским телом. Мужчины годами терпят, молчат и «держатся» — а тело всё это время помнит каждое напряжение. Здесь можно наконец выдохнуть: расслабляемся целиком, никуда не торопясь, в своём темпе. Проводит сертифицированный мастер Евгения Болмасова. Многие после сеанса говорят: «Не помню, когда я так отдыхал».', msg: 'Здравствуйте, хочу записаться к Евгении на практику Лингам-массажа.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Болмасова', sensitive: true },
-    { title: 'Тантрический массаж', price: '12 000 ₽', time: '90 мин', desc: 'Массаж всего тела в самом медленном темпе из всех, что я делаю. Никуда не торопимся: чувствуем, как отзывается тело, и двигаемся за ним. Снимает глубокое напряжение, которое не берёт обычный спа-массаж, и возвращает чувствительность телу, которое давно живёт «на автопилоте». К концу сеанса многие не хотят вставать с кушетки — и это лучшая оценка. Подходит и мужчинам, и женщинам.', msg: 'Здравствуйте, Игорь! Хочу записаться на тантрический массаж.', who: 'igor', msg2: 'Здравствуйте, Евгения! Хочу записаться на тантрический массаж.', who2: 'evgenia', master: 'Мастера: Игорь или Евгения, на выбор', sensitive: true },
+    { title: 'Тантрический массаж', price: '12 000 ₽', time: '90 мин', desc: 'Массаж всего тела в самом медленном темпе из всех, что я делаю. Никуда не торопимся: чувствуем, как отзывается тело, и двигаемся за ним. Снимает глубокое напряжение, которое не берёт обычный спа-массаж, и возвращает чувствительность телу, которое давно живёт «на автопилоте». К концу сеанса многие не хотят вставать с кушетки — и это лучшая оценка. Подходит и мужчинам, и женщинам.', msg: 'Здравствуйте, Игорь! Хочу записаться на тантрический массаж.', who: 'igor', msg2: 'Здравствуйте, Евгения! Хочу записаться на тантрический массаж.', who2: 'evgenia', master: 'Женщинам: Игорь или Евгения. Мужчинам: Евгения.', label: 'Женщинам к Игорю', label2: 'К Евгении', sensitive: true },
     { title: 'Энергетический массаж', price: '10 000 ₽', time: '60 мин', desc: 'Мягкий массаж с тёплым маслом: плавные, текучие движения без сильного нажима. Снимает глубокие зажимы, до которых обычный массаж не доходит, — через тепло и спокойный ритм. Многие засыпают на сеансе, это нормально. Подходит и мужчинам, и женщинам.', msg: 'Здравствуйте, хочу записаться к Евгении на энергетический массаж.', who: 'evgenia', master: 'Проводит сертифицированный мастер Евгения Болмасова', sensitive: true }
   ],
   education: [
@@ -2317,7 +2320,7 @@ function openServiceModal(key, i) {
       bookBox.innerHTML = '';
       const row = document.createElement('div');
       row.style.cssText = 'display:flex; gap:10px; flex-wrap:wrap;';
-      [[s.msg, s.who, 'Слот к Игорю'], [s.msg2, s.who2, 'Слот к Евгении']].forEach(([m, w, label]) => {
+      [[s.msg, s.who, s.label || 'Слот к Игорю'], [s.msg2, s.who2, s.label2 || 'Слот к Евгении']].forEach(([m, w, label]) => {
         const b = document.createElement('button');
         b.className = 'btn-primary';
         b.style.cssText = 'flex:1; min-width:150px;';

@@ -248,6 +248,7 @@ svg.tree{fill:var(--gold);display:block;}
 <script type="application/ld+json">
 {"@context": "https://schema.org","@type": "Person","name": "Евгения Болмасова","jobTitle": "Сертифицированный мастер телесных практик","worksFor": {"@type": "Organization","name": "Студия сексологии Игоря Пожидаева"},"url": "https://pozhidaev-sexolog.ru/about.html","sameAs": ["https://t.me/BOLMBOM"]}
 </script>
+<link rel="stylesheet" href="/assets/contact-controls.css?v=1">
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><svg class="preloader-tree" viewBox="0 0 255 256"><use href="#tree"/></svg></div>
@@ -656,8 +657,10 @@ const revealObserver = new IntersectionObserver((entries)=>{ entries.forEach(e=>
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 (function watchGrowTrees(){var pending=document.querySelectorAll('.tree-grow:not(.visible)');if(!pending.length)return;var vh=window.innerHeight;pending.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.88&&r.bottom>40)el.classList.add('visible');});requestAnimationFrame(watchGrowTrees);})();
 </script>
-<a class="float-tg" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg></a>
-<a class="float-max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
+<div class="quick-actions" role="group" aria-label="Быстрая связь">
+<a class="float-tg" data-label="Telegram" href="#" onclick="bookTg('Здравствуйте, Игорь! Хочу записаться на консультацию.','igor'); return false;" title="Написать в Telegram" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 10.5l6 2.2L18 6 9.5 14.3l-.3 5 3-3 4.2 3.1z"/></svg></a>
+<a class="float-max" data-label="Max" href="https://max.ru/u/f9LHodD0cOI7l7GHxD-vmFmbOVp2_QXwN2FQ0U76JyZ3BnfkZeu0ygAhjH0" target="_blank" rel="noopener" title="Написать в Max" aria-label="Написать в Max"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.6 7.1V22l3.4-1.9c.9.3 2 .4 3 .4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.6-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z"/></svg></a>
+</div>
 
 <div class="video-modal" id="videoModal" onclick="closeVideoModalBg(event)">
   <div class="vm-box">

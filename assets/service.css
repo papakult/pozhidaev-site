@@ -80,3 +80,8 @@ li{font-size:16.5px;margin-bottom:9px}
 .float-tg svg{width:28px;height:28px}
 @media(max-width:480px){.float-tg{width:48px;height:48px;right:16px;bottom:16px}.float-tg svg{width:24px;height:24px}}
 @media(max-width:600px){.pricecard{padding:24px 20px}.cta{padding:30px 20px}}
+
+/* Mobile contact shortcuts must not cover article text. */
+@media (max-width: 768px) {
+  .float-tg { position: static; margin: 24px auto; animation: none; }
+}

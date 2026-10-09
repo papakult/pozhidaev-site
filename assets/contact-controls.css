@@ -1,0 +1,31 @@
+/* Desktop shortcuts float; mobile shortcuts stay clear of the text. */
+.quick-actions { display: contents; }
+@media (max-width: 768px) {
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 24px max(24px, env(safe-area-inset-bottom));
+    background: var(--cream, #FDF8F0);
+  }
+  .quick-actions .float-tg,
+  .quick-actions .float-max,
+  .quick-actions .safe-mode-btn {
+    position: static;
+    flex: 0 1 auto;
+    width: auto;
+    min-height: 44px;
+    height: auto;
+    padding: 12px 18px;
+    gap: 8px;
+    border-radius: 100px;
+    animation: none;
+    transform: none;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .quick-actions a::after { content: attr(data-label); }
+  .quick-actions .safe-mode-btn:not(.active) .sm-label-off,
+  .quick-actions .safe-mode-btn.active .sm-label-on { display: inline; }
+}
