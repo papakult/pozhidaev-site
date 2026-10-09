@@ -13,8 +13,8 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1120px;margin:0 auto;padding:0 24px}
 .logo{display:flex;align-items:center;gap:12px}
 .logo img{width:44px;height:44px}
-.logo-text h3{font-size:16px;font-weight:600}
-.logo-text span{font-size:12px;color:var(--text-light)}
+.logo-text h3{font-size:16px;font-weight:600;margin:0}
+.logo-text span{display:block;font-size:12px;color:var(--text-light)}
 .nav{display:flex;align-items:center;gap:22px}
 .nav a{font-size:14px;font-weight:500;color:var(--text-light);transition:color .3s}
 .nav a:hover{color:var(--bordo)}
@@ -84,4 +84,12 @@ li{font-size:16.5px;margin-bottom:9px}
 /* Mobile contact shortcuts must not cover article text. */
 @media (max-width: 768px) {
   .float-tg { position: static; margin: 24px auto; animation: none; }
+}
+@media (max-width: 480px) {
+  .header-inner { padding: 0 12px; gap: 8px; }
+  .header .logo { gap: 8px; flex-shrink: 0; }
+  .header .logo img { width: 32px; height: 32px; }
+  .header .logo-text h3 { font-size: 14px; white-space: nowrap; }
+  .header .logo-text span { font-size: 10px; white-space: nowrap; }
+  .header .btn-primary { min-height: 44px; padding: 10px 12px; font-size: 12px; }
 }
