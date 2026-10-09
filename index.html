@@ -1231,6 +1231,8 @@ svg.tree { fill: var(--gold); display:block; }
 {"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Нужно ли раздеваться на консультациях?","acceptedAnswer": {"@type": "Answer","text": "Нет, консультация начинается как разговор. К телесным практикам переходим только по запросу и после обсуждения."}},{"@type": "Question","name": "Можно прийти с партнёром?","acceptedAnswer": {"@type": "Answer","text": "Да, есть парные консультации и практики."}},{"@type": "Question","name": "Как записаться?","acceptedAnswer": {"@type": "Answer","text": "Нажимайте Telegram, WhatsApp, Max или звонок. Игорь подтверждает удобное время, первые 15 минут бесплатны."}},{"@type": "Question","name": "Принимаете в Адлере?","acceptedAnswer": {"@type": "Answer","text": "Да, кабинет находится в Сочи, это удобно добираться и из Адлера. Точный адрес присылаем после записи."}},{"@type": "Question","name": "Можно ли консультацию онлайн?","acceptedAnswer": {"@type": "Answer","text": "Да, все разговорные консультации, индивидуальные и парные, можно провести онлайн из любого города. Формат и порядок работы те же, что и очно."}},{"@type": "Question","name": "Это безопасно?","acceptedAnswer": {"@type": "Answer","text": "Да, основа — границы, согласие и ваше право остановить процесс в любой момент."}}]}
 </script>
 <link rel="stylesheet" href="/assets/contact-controls.css?v=1">
+<link rel="stylesheet" href="/assets/mobile-nav.css?v=1">
+<script src="/assets/mobile-nav.js?v=1" defer></script>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><svg class="preloader-tree" viewBox="0 0 255 256"><use href="#tree"/></svg></div>
@@ -1997,8 +1999,8 @@ c61 41 94 86 99 136 5 40 -22 30 -37 -15 -17 -48 -67 -94 -141 -129 -59 -28
     <div class="quiz-result" id="quizResult">
       <h3 id="quizResultTitle"></h3>
       <p id="quizResultText"></p>
-      <p class="quiz-bonus">Оставьте контакт в Telegram, и мы пришлём PDF-чек-лист подготовки и рекомендацию по формату сессии. Бесплатная 15-минутная встреча закрепляется за вами.</p>
-      <button class="quiz-submit" style="margin: 0 auto; display: block;" onclick="bookTg('Игорь, приветствую! Я прошел(а) тест на сайте pozhidaev-sexolog.ru, отправьте мне, пожалуйста, чек-лист подготовки и рекомендацию по формату сессии.','igor')">Получить разбор и чек-лист в Telegram</button>
+      <p class="quiz-bonus">Это предварительный ориентир, а не назначение практики. Обсудите свой запрос с Игорем на бесплатном 15-минутном знакомстве. Формат встречи и границы согласуются лично.</p>
+      <button class="quiz-submit" style="margin: 0 auto; display: block;" onclick="bookQuizResult()">Обсудить результат в Telegram</button>
       <button class="quiz-restart" onclick="restartQuiz()">Пройти тест заново</button>
     </div>
   </div>
@@ -2384,9 +2386,6 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== MOBILE NAV =====
-function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
 
 // ===== TABS (Фишка 2) =====
 function switchTab(tabId) {
@@ -2477,8 +2476,11 @@ function scrollToEl(selector) {
 let quizStep = 1;
 let quizScores = { psy: 0, body: 0 };
 let quizFormat = '';
+let quizPreference = '';
+let quizMessage = '';
 
 function quizAnswer(type) {
+  if (quizStep === 4) quizPreference = type;
   if (type === 'both') { quizScores.psy++; quizScores.body++; }
   else if (type === 'psy') quizScores.psy++;
   else if (type === 'body') quizScores.body++;
@@ -2501,6 +2503,43 @@ function updateQuizProgress() {
   document.getElementById('quizCounter').textContent = shown + ' из 5';
 }
 
+function getQuizRecommendation(format, preference, scores) {
+  if (format === 'edu') {
+    return {
+      title: 'Обучение телесным практикам',
+      text: 'В студии есть курсы йони-массажа, лингам-массажа, тантрического и энергетического массажа. Программу выбираем под вашу цель и опыт. Обучение ведёт Игорь, часть практических занятий проходит вместе с Евгенией. В обучении оба ведущих работают с женщинами и мужчинами.',
+      message: 'Здравствуйте, Игорь! Я прошел(а) тест на сайте и хочу обсудить обучение телесным практикам.'
+    };
+  }
+  if (format === 'pair') {
+    return {
+      title: 'Начните с парной консультации',
+      text: preference === 'psy'
+        ? 'Вы выбрали встречу вдвоём и разговор без телесного контакта. На парной консультации с Игорем можно обсудить отношения, ожидания и то, что сейчас мешает близости. Прикосновения в этот формат не входят.'
+        : 'Вы хотите прийти вдвоём. Начните с разговора с Игорем о запросе каждого из вас. Если вам интересны парные телесные практики, их формат и границы обсуждаются отдельно, с согласия обоих партнёров.',
+      message: 'Здравствуйте, Игорь! Мы прошли тест на сайте и хотим записаться на парную разговорную консультацию.'
+    };
+  }
+  if (preference === 'psy' || scores.psy >= scores.body) {
+    return {
+      title: 'Начните с разговорной консультации',
+      text: preference === 'psy'
+        ? 'Вы выбрали разговор без телесного контакта. Подойдёт знакомство с Игорем, чтобы обсудить ваш запрос и условия дальнейшей работы. Телесные практики не входят в выбранный вами формат.'
+        : 'Начните с разговора с Игорем о том, что вас беспокоит. На знакомстве можно уточнить запрос и выбрать дальнейший формат без обязательства переходить к телесным практикам.',
+      message: 'Здравствуйте, Игорь! Я прошел(а) тест на сайте и хочу записаться на разговорную консультацию без телесного контакта.'
+    };
+  }
+  return {
+    title: 'Обсудите формат телесной практики',
+    text: 'Вам интересна работа с телом. Начните с бесплатного знакомства с Игорем, чтобы обсудить запрос, ограничения и границы. Конкретную практику по этому тесту не назначаем. На телесные практики мужчины записываются к Евгении; женщины могут выбрать Игоря или Евгению с учетом направления.',
+    message: 'Здравствуйте, Игорь! Я прошел(а) тест на сайте и хочу на бесплатном знакомстве обсудить формат телесной практики.'
+  };
+}
+
+function bookQuizResult() {
+  if (quizMessage) bookTg(quizMessage, 'igor');
+}
+
 function showQuizResult() {
   document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
   document.getElementById('quizProgress').style.width = '100%';
@@ -2509,16 +2548,10 @@ function showQuizResult() {
   const title = document.getElementById('quizResultTitle');
   const text = document.getElementById('quizResultText');
 
-  if (quizFormat === 'edu') {
-    title.textContent = 'Вам подойдет профессиональный курс';
-    text.textContent = 'Вам подходит курс йони-массажа для пар или практиков. Теория, анатомия и отработка техник под руководством Игоря.';
-  } else if (quizScores.body > quizScores.psy) {
-    title.textContent = 'Вам подойдут телесные практики';
-    text.textContent = 'Вам лучше всего подойдут глубокие телесные практики, например йони или лингам-массаж. Это кратчайший путь к расслаблению, снятию хронических зажимов и полному принятию себя.';
-  } else {
-    title.textContent = 'Ваш формат, консультация';
-    text.textContent = 'Ваш идеальный формат, это индивидуальная или парная консультация. Она поможет снять ментальные блоки, проговорить скрытые страхи и вернуть ясность в мысли и отношения.';
-  }
+  const result = getQuizRecommendation(quizFormat, quizPreference, quizScores);
+  title.textContent = result.title;
+  text.textContent = result.text;
+  quizMessage = result.message;
   document.getElementById('quizResult').classList.add('active');
 }
 
@@ -2526,6 +2559,8 @@ function restartQuiz() {
   quizStep = 1;
   quizScores = { psy: 0, body: 0 };
   quizFormat = '';
+  quizPreference = '';
+  quizMessage = '';
   document.getElementById('quizResult').classList.remove('active');
   document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
   document.querySelector('[data-step="1"]').classList.add('active');

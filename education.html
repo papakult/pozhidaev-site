@@ -243,6 +243,8 @@ svg.tree{fill:var(--gold);display:block;}
 {"@context": "https://schema.org","@type": "Course","name": "Курс энергетического массажа","description": "Самый мягкий из всех курсов — без интимных зон, без сложных техник. Учимся теплу, текучим движениям и тому, как руками помогать человеку расслабиться до самых глубоких слоёв. Если вы давно хотели работать с телом, но боялись начать, — начните с этого курса.","provider": {"@type": "Organization","name": "Студия сексологии Игоря Пожидаева","url": "https://pozhidaev-sexolog.ru/"}}
 </script>
 <link rel="stylesheet" href="/assets/contact-controls.css?v=1">
+<link rel="stylesheet" href="/assets/mobile-nav.css?v=1">
+<script src="/assets/mobile-nav.js?v=1" defer></script>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><svg class="preloader-tree" viewBox="0 0 255 256"><use href="#tree"/></svg></div>
@@ -663,7 +665,6 @@ const TG_EVGENIA = 'https://t.me/BOLMBOM'; // TODO: заменить на реа
 const WA_IGOR = 'https://wa.me/79189150906';           // TODO: заменить на реальный номер WhatsApp
 function bookTg(msg, who) { const base = (who === 'evgenia') ? TG_EVGENIA : TG_IGOR; window.open(base + '?text=' + encodeURIComponent(msg || ''), '_blank'); }
 function openWa(msg) { window.open(WA_IGOR + '?text=' + encodeURIComponent(msg || 'Здравствуйте! Хочу записаться.'), '_blank'); }
-function toggleMobileNav(){ document.getElementById('mobileNav').classList.toggle('open'); }
 function scrollToEl(sel){ const el=document.querySelector(sel); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); }
 function toggleFaq(btn){
   const item=btn.closest('.faq-item'), a=item.querySelector('.faq-a'), open=item.classList.contains('open');

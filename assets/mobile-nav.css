@@ -1,0 +1,22 @@
+/* A short viewport needs a scrollable menu, not vertically centered links. */
+.mobile-nav {
+  z-index: 2000;
+  visibility: hidden;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 76px 24px max(28px, env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.mobile-nav.open { visibility: visible; }
+.mobile-nav > a { flex-shrink: 0; }
+.mobile-nav .close-nav {
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav :focus-visible { outline: 2px solid var(--bordo); outline-offset: 4px; }

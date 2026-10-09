@@ -249,6 +249,8 @@ svg.tree{fill:var(--gold);display:block;}
 {"@context": "https://schema.org","@type": "Person","name": "Евгения Болмасова","jobTitle": "Сертифицированный мастер телесных практик","worksFor": {"@type": "Organization","name": "Студия сексологии Игоря Пожидаева"},"url": "https://pozhidaev-sexolog.ru/about.html","sameAs": ["https://t.me/BOLMBOM"]}
 </script>
 <link rel="stylesheet" href="/assets/contact-controls.css?v=1">
+<link rel="stylesheet" href="/assets/mobile-nav.css?v=1">
+<script src="/assets/mobile-nav.js?v=1" defer></script>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><svg class="preloader-tree" viewBox="0 0 255 256"><use href="#tree"/></svg></div>
@@ -648,7 +650,6 @@ const TG_EVGENIA = 'https://t.me/BOLMBOM'; // TODO: заменить на реа
 const WA_IGOR = 'https://wa.me/79189150906';           // TODO: заменить на реальный номер WhatsApp
 function bookTg(msg, who) { const base = (who === 'evgenia') ? TG_EVGENIA : TG_IGOR; window.open(base + '?text=' + encodeURIComponent(msg || ''), '_blank'); }
 function openWa(msg) { window.open(WA_IGOR + '?text=' + encodeURIComponent(msg || 'Здравствуйте! Хочу записаться.'), '_blank'); }
-function toggleMobileNav(){ document.getElementById('mobileNav').classList.toggle('open'); }
 function openVideoModal(){ const m=document.getElementById('videoModal'); m.classList.add('open'); document.body.style.overflow='hidden'; const v=document.getElementById('heroFullVideo'); if(v){try{v.currentTime=0;v.play();}catch(e){}} }
 function closeVideoModal(){ const m=document.getElementById('videoModal'); m.classList.remove('open'); document.body.style.overflow=''; const v=document.getElementById('heroFullVideo'); if(v) v.pause(); }
 function closeVideoModalBg(e){ if(e.target===document.getElementById('videoModal')) closeVideoModal(); }
