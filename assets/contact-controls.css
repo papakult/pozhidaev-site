@@ -36,7 +36,13 @@
   .header .logo { min-width: 0; gap: 6px; margin-right: auto; }
   .header .logo-icon { width: 32px; height: 32px; }
   .header .logo-text h3 { font-size: 15px; line-height: 1.1; }
-  .header .logo-text span { display: none; }
+  .header .logo-text span {
+    display: block;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-top: 2px;
+  }
   .header .quick-actions { padding: 0; gap: 4px; flex-shrink: 0; }
   .header .quick-actions a { width: 44px; padding: 0; border-radius: 50%; }
   .header .quick-actions a::after { content: none; }
