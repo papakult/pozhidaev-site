@@ -1,31 +1,33 @@
-/* Desktop shortcuts float; mobile shortcuts stay clear of the text. */
+/* Reserve a mobile side lane so floating shortcuts never cover page copy. */
 .quick-actions { display: contents; }
 @media (max-width: 768px) {
+  body { padding-right: 68px; }
   .quick-actions {
+    position: fixed;
+    right: 8px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 1000;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px 24px max(24px, env(safe-area-inset-bottom));
-    background: var(--cream, #FDF8F0);
+    flex-direction: column;
+    gap: 10px;
+    width: 48px;
   }
   .quick-actions .float-tg,
   .quick-actions .float-max,
   .quick-actions .safe-mode-btn {
     position: static;
-    flex: 0 1 auto;
-    width: auto;
-    min-height: 44px;
-    height: auto;
-    padding: 12px 18px;
-    gap: 8px;
-    border-radius: 100px;
+    flex: 0 0 48px;
+    width: 48px;
+    min-height: 48px;
+    height: 48px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
     animation: none;
     transform: none;
     font-size: 13px;
     text-decoration: none;
   }
-  .quick-actions a::after { content: attr(data-label); }
-  .quick-actions .safe-mode-btn:not(.active) .sm-label-off,
-  .quick-actions .safe-mode-btn.active .sm-label-on { display: inline; }
+  .quick-actions .safe-mode-btn .sm-label-off,
+  .quick-actions .safe-mode-btn .sm-label-on { display: none; }
 }
