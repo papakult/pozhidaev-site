@@ -13,7 +13,7 @@
       if (privacy) menu.append(privacy);
     } else {
       if (privacy) controls.append(privacy);
-      header.append(controls);
+      row.insertBefore(controls, row.querySelector('.nav'));
     }
   };
   place();
